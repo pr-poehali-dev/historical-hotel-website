@@ -1,20 +1,6 @@
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <style>{`
-        .form-toggle:checked ~ .registration-form {
-          display: none;
-        }
-        .form-toggle:checked ~ .login-form {
-          display: block;
-        }
-        .form-toggle:not(:checked) ~ .registration-form {
-          display: block;
-        }
-        .form-toggle:not(:checked) ~ .login-form {
-          display: none;
-        }
-      `}</style>
 
       <header className="bg-primary text-primary-foreground py-4 sm:py-6 shadow-lg border-b-4 border-secondary">
         <div className="container mx-auto px-4">
@@ -146,175 +132,102 @@ const Index = () => {
         </article>
 
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12 md:mb-16">
-          <section className="bg-card rounded-lg shadow-xl p-4 sm:p-6 md:p-8 border-2 border-secondary relative">
-            <input type="checkbox" id="form-toggle" className="form-toggle hidden" />
-            
-            <div className="registration-form">
-              <header className="mb-4 sm:mb-6">
-                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-2">Регистрация в системе</h2>
-                <p className="text-xs sm:text-sm text-muted-foreground">Создайте аккаунт для управления бронированием</p>
-              </header>
+          <section className="bg-card rounded-lg shadow-xl p-4 sm:p-6 md:p-8 border-2 border-secondary">
+            <header className="mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-primary mb-2">Регистрация в системе</h2>
+              <p className="text-xs sm:text-sm text-muted-foreground">Создайте аккаунт для управления бронированием</p>
+            </header>
 
-              <form className="space-y-4 sm:space-y-5">
-                <div>
-                  <label htmlFor="reg-fullname" className="block text-sm font-semibold mb-2 text-foreground">
-                    ФИО
-                  </label>
-                  <input
-                    type="text"
-                    id="reg-fullname"
-                    name="fullname"
-                    required
-                    minLength={3}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
-                    placeholder="Иванов Иван Иванович"
-                  />
-                  <p className="text-xs text-muted-foreground mt-1">Введите полное имя</p>
-                </div>
+            <form className="space-y-4 sm:space-y-5">
+              <div>
+                <label htmlFor="fullname" className="block text-sm font-semibold mb-2 text-foreground">
+                  ФИО
+                </label>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  required
+                  minLength={3}
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
+                  placeholder="Иванов Иван Иванович"
+                />
+                <p className="text-xs text-muted-foreground mt-1">Введите полное имя</p>
+              </div>
 
-                <div>
-                  <label htmlFor="reg-email" className="block text-sm font-semibold mb-2 text-foreground">
-                    Электронная почта
-                  </label>
-                  <input
-                    type="email"
-                    id="reg-email"
-                    name="email"
-                    required
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
-                    placeholder="example@longmen.cn"
-                  />
-                  <p className="text-xs text-muted-foreground mt-1">Введите действующий адрес электронной почты</p>
-                </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold mb-2 text-foreground">
+                  Электронная почта
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
+                  placeholder="example@longmen.cn"
+                />
+                <p className="text-xs text-muted-foreground mt-1">Введите действующий адрес электронной почты</p>
+              </div>
 
-                <div>
-                  <label htmlFor="reg-password" className="block text-sm font-semibold mb-2 text-foreground">
-                    Пароль
-                  </label>
-                  <input
-                    type="password"
-                    id="reg-password"
-                    name="password"
-                    required
-                    minLength={8}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
-                    placeholder="Минимум 8 символов"
-                  />
-                  <p className="text-xs text-muted-foreground mt-1">Пароль должен содержать не менее 8 символов</p>
-                </div>
+              <div>
+                <label htmlFor="password" className="block text-sm font-semibold mb-2 text-foreground">
+                  Пароль
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  minLength={8}
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
+                  placeholder="Минимум 8 символов"
+                />
+                <p className="text-xs text-muted-foreground mt-1">Пароль должен содержать не менее 8 символов</p>
+              </div>
 
-                <div>
-                  <label htmlFor="reg-confirm" className="block text-sm font-semibold mb-2 text-foreground">
-                    Подтверждение пароля
-                  </label>
-                  <input
-                    type="password"
-                    id="reg-confirm"
-                    name="confirm-password"
-                    required
-                    minLength={8}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
-                    placeholder="Повторите пароль"
-                  />
-                  <p className="text-xs text-muted-foreground mt-1">Пароли должны совпадать</p>
-                </div>
+              <div>
+                <label htmlFor="confirm-password" className="block text-sm font-semibold mb-2 text-foreground">
+                  Подтверждение пароля
+                </label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  required
+                  minLength={8}
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
+                  placeholder="Повторите пароль"
+                />
+                <p className="text-xs text-muted-foreground mt-1">Пароли должны совпадать</p>
+              </div>
 
-                <div className="flex items-start gap-2">
-                  <input
-                    type="checkbox"
-                    id="terms"
-                    required
-                    className="w-4 h-4 mt-1 text-primary border-2 border-input rounded focus:ring-2 focus:ring-ring cursor-pointer flex-shrink-0"
-                  />
-                  <label htmlFor="terms" className="text-xs sm:text-sm text-foreground cursor-pointer leading-relaxed">
-                    Я согласен с{' '}
-                    <a href="#terms" className="text-primary hover:underline font-semibold">
-                      условиями пользовательского соглашения
-                    </a>
-                    {' '}и{' '}
-                    <a href="#privacy" className="text-primary hover:underline font-semibold">
-                      политикой конфиденциальности
-                    </a>
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-primary text-primary-foreground font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-ring transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
-                >
-                  Зарегистрироваться
-                </button>
-
-                <div className="text-center pt-2">
-                  <label
-                    htmlFor="form-toggle"
-                    className="text-xs sm:text-sm text-primary hover:underline cursor-pointer font-semibold inline-block px-2 py-1"
-                  >
-                    Уже есть аккаунт? Войти
-                  </label>
-                </div>
-              </form>
-            </div>
-
-            <div className="login-form" style={{ display: 'none' }}>
-              <header className="mb-4 sm:mb-6">
-                <h2 className="text-xl sm:text-2xl font-bold text-primary mb-2">Вход в личный кабинет</h2>
-                <p className="text-xs sm:text-sm text-muted-foreground">Добро пожаловать в систему управления гостиницей</p>
-              </header>
-
-              <form className="space-y-4 sm:space-y-5">
-                <div>
-                  <label htmlFor="login-email" className="block text-sm font-semibold mb-2 text-foreground">
-                    Электронная почта
-                  </label>
-                  <input
-                    type="email"
-                    id="login-email"
-                    name="email"
-                    required
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
-                    placeholder="example@longmen.cn"
-                  />
-                  <p className="text-xs text-muted-foreground mt-1">Введите действующий адрес электронной почты</p>
-                </div>
-
-                <div>
-                  <label htmlFor="login-password" className="block text-sm font-semibold mb-2 text-foreground">
-                    Пароль
-                  </label>
-                  <input
-                    type="password"
-                    id="login-password"
-                    name="password"
-                    required
-                    minLength={8}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
-                    placeholder="Минимум 8 символов"
-                  />
-                  <p className="text-xs text-muted-foreground mt-1">Пароль должен содержать не менее 8 символов</p>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-primary text-primary-foreground font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-ring transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
-                >
-                  Войти
-                </button>
-
-                <div className="text-center pt-2">
-                  <label
-                    htmlFor="form-toggle"
-                    className="text-xs sm:text-sm text-primary hover:underline cursor-pointer font-semibold inline-block px-2 py-1"
-                  >
-                    Нет аккаунта? Зарегистрироваться
-                  </label>
-                  <span className="mx-2 text-muted-foreground">•</span>
-                  <a href="#forgot" className="text-xs sm:text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring rounded px-2 py-1">
-                    Забыли пароль?
+              <div className="flex items-start gap-2">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  required
+                  className="w-4 h-4 mt-1 text-primary border-2 border-input rounded focus:ring-2 focus:ring-ring cursor-pointer flex-shrink-0"
+                />
+                <label htmlFor="terms" className="text-xs sm:text-sm text-foreground cursor-pointer leading-relaxed">
+                  Я согласен с{' '}
+                  <a href="#terms" className="text-primary hover:underline font-semibold">
+                    условиями пользовательского соглашения
                   </a>
-                </div>
-              </form>
-            </div>
+                  {' '}и{' '}
+                  <a href="#privacy" className="text-primary hover:underline font-semibold">
+                    политикой конфиденциальности
+                  </a>
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-primary text-primary-foreground font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-ring transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
+              >
+                Зарегистрироваться
+              </button>
+            </form>
           </section>
 
           <section className="bg-card rounded-lg shadow-xl p-4 sm:p-6 md:p-8 border-2 border-secondary">
