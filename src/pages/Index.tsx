@@ -1,33 +1,34 @@
 import { useState } from 'react';
 
 const Index = () => {
-  const [rememberMe, setRememberMe] = useState(false);
+  const [isRegistering, setIsRegistering] = useState(true);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="bg-primary text-primary-foreground py-6 shadow-lg border-b-4 border-secondary">
+      <header className="bg-primary text-primary-foreground py-4 sm:py-6 shadow-lg border-b-4 border-secondary">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center tracking-wide">龙门客栈</h1>
-          <p className="text-center text-lg mt-2 opacity-90">Гостиница «Врата Дракона»</p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center tracking-wide">龙门客栈</h1>
+          <p className="text-center text-sm sm:text-base md:text-lg mt-2 opacity-90">Гостиница «Врата Дракона»</p>
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-12 max-w-6xl">
-        <article className="mb-16 bg-card rounded-lg shadow-xl overflow-hidden border-2 border-secondary">
-          <header className="bg-primary text-primary-foreground p-8">
-            <h2 className="text-3xl font-bold mb-2">История легендарной гостиницы</h2>
-            <p className="text-sm opacity-90">Опубликовано: 15 октября 1368 года династии Мин</p>
+      <main className="container mx-auto px-4 py-6 sm:py-8 md:py-12 max-w-6xl">
+        <article className="mb-8 sm:mb-12 md:mb-16 bg-card rounded-lg shadow-xl overflow-hidden border-2 border-secondary">
+          <header className="bg-primary text-primary-foreground p-4 sm:p-6 md:p-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">История легендарной гостиницы</h2>
+            <p className="text-xs sm:text-sm opacity-90">Опубликовано: 15 октября 1368 года династии Мин</p>
           </header>
 
-          <div className="p-8">
+          <div className="p-4 sm:p-6 md:p-8">
             <section className="mb-8">
               <img 
                 src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/1321d2bc-a730-481f-8494-f54f9687e555.jpg" 
                 alt="Гостиница Врата Дракона" 
-                className="w-full h-96 object-cover rounded-lg shadow-md mb-6"
+                className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-lg shadow-md mb-4 sm:mb-6"
               />
               
-              <h3 className="text-2xl font-semibold mb-4 text-primary">Основание и расцвет</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Основание и расцвет</h3>
               <p className="mb-4 leading-relaxed text-foreground">
                 В далёком 756 году, во времена расцвета династии Тан, на Великом Шёлковом пути появилась 
                 гостиница «Врата Дракона». Её основатель, мастер Ли Вэньхуа, был известным торговцем чаем, 
@@ -50,12 +51,12 @@ const Index = () => {
             </section>
 
             <section className="mb-8">
-              <h3 className="text-2xl font-semibold mb-4 text-primary">Архитектурные особенности</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Архитектурные особенности</h3>
               
               <img 
                 src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/962f1e84-5fc0-43aa-ac94-bf2c85d2f65b.jpg" 
                 alt="Внутренний двор гостиницы" 
-                className="w-full h-80 object-cover rounded-lg shadow-md mb-6 float-right ml-6 max-w-md"
+                className="w-full sm:float-right sm:ml-6 sm:max-w-xs md:max-w-md h-48 sm:h-60 md:h-80 object-cover rounded-lg shadow-md mb-4 sm:mb-6"
               />
               
               <p className="mb-4 leading-relaxed text-foreground">
@@ -78,7 +79,7 @@ const Index = () => {
             </section>
 
             <section className="mb-8">
-              <h3 className="text-2xl font-semibold mb-4 text-primary">Знаменитые гости</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Знаменитые гости</h3>
               
               <p className="mb-4 leading-relaxed text-foreground">
                 За столетия через гостиницу прошли тысячи выдающихся личностей:
@@ -102,8 +103,8 @@ const Index = () => {
               </blockquote>
             </section>
 
-            <aside className="bg-muted p-6 rounded-lg my-8 border-l-4 border-primary">
-              <h4 className="text-xl font-semibold mb-3 text-primary">Интересный факт</h4>
+            <aside className="bg-muted p-4 sm:p-6 rounded-lg my-6 sm:my-8 border-l-4 border-primary">
+              <h4 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-primary">Интересный факт</h4>
               <p className="text-muted-foreground leading-relaxed">
                 В 1127 году, во время нашествия чжурчжэней, гостиница укрыла более 200 беженцев 
                 в своих подвалах. За этот подвиг император династии Сун лично наградил владельца 
@@ -112,7 +113,7 @@ const Index = () => {
             </aside>
 
             <section>
-              <h3 className="text-2xl font-semibold mb-4 text-primary">Наследие</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Наследие</h3>
               <p className="mb-4 leading-relaxed text-foreground">
                 Сегодня «Врата Дракона» остаётся символом традиционного китайского гостеприимства. 
                 Гостиница была полностью отреставрирована в 2005 году с сохранением всех исторических 
@@ -126,22 +127,47 @@ const Index = () => {
             </section>
           </div>
 
-          <footer className="bg-muted p-6 border-t-2 border-border">
-            <p className="text-sm text-muted-foreground">
+          <footer className="bg-muted p-4 sm:p-6 border-t-2 border-border">
+            <p className="text-xs sm:text-sm text-muted-foreground">
               Автор: Чэнь Мэйлин, историк династий Тан и Сун<br />
               Источники: Императорские архивы, записи путешественников, археологические данные
             </p>
           </footer>
         </article>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <section className="bg-card rounded-lg shadow-xl p-8 border-2 border-secondary">
-            <header className="mb-6">
-              <h2 className="text-2xl font-bold text-primary mb-2">Вход в личный кабинет</h2>
-              <p className="text-sm text-muted-foreground">Добро пожаловать в систему управления гостиницей</p>
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12 md:mb-16">
+          <section className="bg-card rounded-lg shadow-xl p-4 sm:p-6 md:p-8 border-2 border-secondary">
+            <header className="mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-primary mb-2">
+                {isRegistering ? 'Регистрация в системе' : 'Вход в личный кабинет'}
+              </h2>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                {isRegistering 
+                  ? 'Создайте аккаунт для управления бронированием' 
+                  : 'Добро пожаловать в систему управления гостиницей'
+                }
+              </p>
             </header>
 
-            <form className="space-y-6">
+            <form className="space-y-4 sm:space-y-5">
+              {isRegistering && (
+                <div>
+                  <label htmlFor="fullname" className="block text-sm font-semibold mb-2 text-foreground">
+                    ФИО
+                  </label>
+                  <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    required
+                    minLength={3}
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
+                    placeholder="Иванов Иван Иванович"
+                  />
+                  <p className="text-xs text-muted-foreground mt-1">Введите полное имя</p>
+                </div>
+              )}
+
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold mb-2 text-foreground">
                   Электронная почта
@@ -151,7 +177,7 @@ const Index = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
                   placeholder="example@longmen.cn"
                 />
                 <p className="text-xs text-muted-foreground mt-1">Введите действующий адрес электронной почты</p>
@@ -167,59 +193,102 @@ const Index = () => {
                   name="password"
                   required
                   minLength={8}
-                  className="w-full px-4 py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
                   placeholder="Минимум 8 символов"
                 />
                 <p className="text-xs text-muted-foreground mt-1">Пароль должен содержать не менее 8 символов</p>
               </div>
 
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="remember"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                  className="w-4 h-4 text-primary border-2 border-input rounded focus:ring-2 focus:ring-ring cursor-pointer"
-                />
-                <label htmlFor="remember" className="ml-2 text-sm text-foreground cursor-pointer">
-                  Запомнить меня
-                </label>
-              </div>
+              {isRegistering && (
+                <div>
+                  <label htmlFor="confirm-password" className="block text-sm font-semibold mb-2 text-foreground">
+                    Подтверждение пароля
+                  </label>
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                    required
+                    minLength={8}
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
+                    placeholder="Повторите пароль"
+                  />
+                  <p className="text-xs text-muted-foreground mt-1">Пароли должны совпадать</p>
+                </div>
+              )}
+
+              {isRegistering ? (
+                <div className="flex items-start gap-2">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    checked={agreedToTerms}
+                    onChange={(e) => setAgreedToTerms(e.target.checked)}
+                    required
+                    className="w-4 h-4 mt-1 text-primary border-2 border-input rounded focus:ring-2 focus:ring-ring cursor-pointer flex-shrink-0"
+                  />
+                  <label htmlFor="terms" className="text-xs sm:text-sm text-foreground cursor-pointer leading-relaxed">
+                    Я согласен с{' '}
+                    <a href="#" className="text-primary hover:underline font-semibold">
+                      условиями пользовательского соглашения
+                    </a>
+                    {' '}и{' '}
+                    <a href="#" className="text-primary hover:underline font-semibold">
+                      политикой конфиденциальности
+                    </a>
+                  </label>
+                </div>
+              ) : null}
 
               <button
                 type="submit"
-                className="w-full bg-primary text-primary-foreground font-semibold py-3 px-6 rounded-lg hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-ring transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full bg-primary text-primary-foreground font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-ring transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
               >
-                Войти
+                {isRegistering ? 'Зарегистрироваться' : 'Войти'}
               </button>
 
-              <div className="text-center">
-                <a href="#" className="text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring rounded px-2 py-1">
-                  Забыли пароль?
-                </a>
+              <div className="text-center pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsRegistering(!isRegistering)}
+                  className="text-xs sm:text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring rounded px-2 py-1 font-semibold"
+                >
+                  {isRegistering 
+                    ? 'Уже есть аккаунт? Войти' 
+                    : 'Нет аккаунта? Зарегистрироваться'
+                  }
+                </button>
+                {!isRegistering && (
+                  <>
+                    <span className="mx-2 text-muted-foreground">•</span>
+                    <a href="#" className="text-xs sm:text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring rounded px-2 py-1">
+                      Забыли пароль?
+                    </a>
+                  </>
+                )}
               </div>
             </form>
           </section>
 
-          <section className="bg-card rounded-lg shadow-xl p-8 border-2 border-secondary">
-            <header className="mb-6">
-              <h2 className="text-2xl font-bold text-primary mb-2">Управляющий гостиницей</h2>
-              <p className="text-sm text-muted-foreground">Информация о текущем дежурном администраторе</p>
+          <section className="bg-card rounded-lg shadow-xl p-4 sm:p-6 md:p-8 border-2 border-secondary">
+            <header className="mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-primary mb-2">Управляющий гостиницей</h2>
+              <p className="text-xs sm:text-sm text-muted-foreground">Информация о текущем дежурном администраторе</p>
             </header>
 
-            <div className="flex items-start gap-6 p-6 bg-accent rounded-lg border-2 border-secondary hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer group">
-              <div className="relative flex-shrink-0">
+            <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 p-4 sm:p-6 bg-accent rounded-lg border-2 border-secondary hover:shadow-lg transition-all duration-300 hover:scale-[1.01] cursor-pointer group">
+              <div className="relative flex-shrink-0 mx-auto sm:mx-0">
                 <img
                   src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/981858a9-711e-4712-81e3-d7b0fcb74866.jpg"
                   alt="Ли Мэй - управляющий гостиницей"
-                  className="w-24 h-24 rounded-full object-cover border-4 border-primary shadow-md group-hover:border-secondary transition-all duration-300"
+                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-4 border-primary shadow-md group-hover:border-secondary transition-all duration-300"
                 />
-                <span className="absolute bottom-1 right-1 w-5 h-5 bg-green-500 border-2 border-white rounded-full shadow-md"></span>
+                <span className="absolute bottom-0 right-0 sm:bottom-1 sm:right-1 w-4 h-4 sm:w-5 sm:h-5 bg-green-500 border-2 border-white rounded-full shadow-md"></span>
               </div>
 
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
+              <div className="flex-1 w-full text-center sm:text-left">
+                <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-primary group-hover:text-secondary transition-colors">
                     Ли Мэй (李梅)
                   </h3>
                   <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
@@ -227,25 +296,25 @@ const Index = () => {
                   </span>
                 </div>
 
-                <p className="text-sm text-muted-foreground mb-3">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-3">
                   <strong>Должность:</strong> Старший администратор
                 </p>
 
-                <p className="text-sm text-foreground leading-relaxed mb-3">
+                <p className="text-xs sm:text-sm text-foreground leading-relaxed mb-3">
                   Потомственный управляющий в 8-м поколении семьи Ли. Знаток традиций династии Тан, 
                   специалист по чайным церемониям и фэншуй.
                 </p>
 
-                <div className="flex gap-2 text-xs text-muted-foreground">
-                  <span className="px-2 py-1 bg-secondary/20 rounded">Опыт: 15 лет</span>
-                  <span className="px-2 py-1 bg-secondary/20 rounded">Языки: 中文, English, Русский</span>
+                <div className="flex flex-wrap justify-center sm:justify-start gap-2 text-xs text-muted-foreground">
+                  <span className="px-2 py-1 bg-secondary/20 rounded whitespace-nowrap">Опыт: 15 лет</span>
+                  <span className="px-2 py-1 bg-secondary/20 rounded whitespace-nowrap">Языки: 中文, EN, РУ</span>
                 </div>
               </div>
             </div>
 
-            <div className="mt-6 p-4 bg-muted rounded-lg">
-              <h4 className="font-semibold text-sm text-foreground mb-2">График работы:</h4>
-              <p className="text-sm text-muted-foreground">
+            <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-muted rounded-lg">
+              <h4 className="font-semibold text-xs sm:text-sm text-foreground mb-2">График работы:</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 Понедельник - Пятница: 08:00 - 20:00<br />
                 Суббота - Воскресенье: 10:00 - 18:00
               </p>
@@ -254,9 +323,9 @@ const Index = () => {
         </div>
       </main>
 
-      <footer className="bg-primary text-primary-foreground py-8 border-t-4 border-secondary">
+      <footer className="bg-primary text-primary-foreground py-6 sm:py-8 border-t-4 border-secondary">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm opacity-90">
+          <p className="text-xs sm:text-sm opacity-90">
             © 756-2024 Гостиница «Врата Дракона» • Провинция Шэньси, Китай
           </p>
           <p className="text-xs mt-2 opacity-75">
