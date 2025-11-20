@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龙门客栈 - Гостиница «Врата Дракона»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #f5f1e8;
+            --card-bg: #ffffff;
+            --primary: #dc2626;
+            --primary-dark: #991b1b;
+            --secondary: #f59e0b;
+            --text: #1f2937;
+            --text-muted: #6b7280;
+            --accent: #fef3c7;
+            --border: #e5d4a3;
+            --input-border: #d4c5a0;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Serif SC', serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--accent);
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        header p {
+            text-align: center;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        article {
+            background: var(--card-bg);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 3rem;
+            border: 2px solid var(--secondary);
+        }
+
+        article header {
+            background-color: var(--primary);
+            color: var(--accent);
+            padding: 2rem;
+            border-bottom: none;
+            box-shadow: none;
+        }
+
+        article header h2 {
+            font-size: 1.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        article header p {
+            text-align: left;
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        .article-content {
+            padding: 2rem;
+        }
+
+        .article-content section {
+            margin-bottom: 2rem;
+        }
+
+        .article-content img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--secondary);
+            background-color: var(--accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+            font-style: italic;
+        }
+
+        blockquote p {
+            font-size: 1.125rem;
+            color: var(--text);
+        }
+
+        blockquote footer {
+            text-align: right;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        aside {
+            background-color: var(--accent);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary);
+        }
+
+        aside h4 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        aside p {
+            color: var(--text-muted);
+        }
+
+        article footer {
+            background-color: var(--accent);
+            padding: 1.5rem 2rem;
+            border-top: 2px solid var(--border);
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .form-section, .card-section {
+            background: var(--card-bg);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 2rem;
+            border: 2px solid var(--secondary);
+        }
+
+        .section-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--input-border);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-family: 'Noto Sans', sans-serif;
+            transition: all 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        input[type="text"]:invalid,
+        input[type="email"]:invalid,
+        input[type="password"]:invalid {
+            border-color: var(--primary);
+        }
+
+        input[type="text"]:valid,
+        input[type="email"]:valid,
+        input[type="password"]:valid {
+            border-color: var(--primary);
+        }
+
+        .form-hint {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        input[type="checkbox"] {
+            width: 1rem;
+            height: 1rem;
+            margin-top: 0.25rem;
+            cursor: pointer;
+            accent-color: var(--primary);
+        }
+
+        .checkbox-group label {
+            font-size: 0.875rem;
+            font-weight: 400;
+            margin-bottom: 0;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .checkbox-group a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            background-color: var(--primary);
+            color: var(--accent);
+            font-weight: 600;
+            padding: 0.875rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--primary-dark);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        .user-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background-color: var(--accent);
+            border-radius: 0.5rem;
+            border: 2px solid var(--secondary);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .user-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transform: scale(1.01);
+        }
+
+        .user-avatar {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .user-avatar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .user-card:hover .user-avatar img {
+            border-color: var(--secondary);
+        }
+
+        .status-indicator {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 1.25rem;
+            height: 1.25rem;
+            background-color: #10b981;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .user-info {
+            flex: 1;
+            text-align: center;
+            width: 100%;
+        }
+
+        .user-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .user-header h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            transition: color 0.3s;
+        }
+
+        .user-card:hover .user-header h3 {
+            color: var(--secondary);
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            background-color: var(--primary);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 1rem;
+        }
+
+        .user-role {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .user-description {
+            font-size: 0.875rem;
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .user-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .user-tags span {
+            padding: 0.25rem 0.5rem;
+            background-color: rgba(245, 158, 11, 0.2);
+            border-radius: 0.25rem;
+        }
+
+        .schedule-box {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: var(--accent);
+            border-radius: 0.5rem;
+        }
+
+        .schedule-box h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .schedule-box p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--accent);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 4px solid var(--secondary);
+        }
+
+        footer p {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        footer p:last-child {
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+            opacity: 0.75;
+        }
+
+        .float-right {
+            float: right;
+            margin-left: 1.5rem;
+            max-width: 450px;
+        }
+
+        .clear-both {
+            clear: both;
+        }
+
+        @media (min-width: 640px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.125rem;
+            }
+
+            .article-content {
+                padding: 2.5rem;
+            }
+
+            .form-section, .card-section {
+                padding: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                padding: 0.875rem 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            header h1 {
+                font-size: 3rem;
+            }
+
+            header p {
+                font-size: 1.25rem;
+            }
+
+            .article-content {
+                padding: 3rem;
+            }
+
+            .user-card {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .user-info {
+                text-align: left;
+            }
+
+            .user-header {
+                flex-direction: row;
+            }
+
+            .user-tags {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>龙门客栈</h1>
+            <p>Гостиница «Врата Дракона»</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <header>
+                <h2>История легендарной гостиницы</h2>
+                <p>Опубликовано: 15 октября 1368 года династии Мин</p>
+            </header>
+
+            <div class="article-content">
+                <section>
+                    <img src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/1321d2bc-a730-481f-8494-f54f9687e555.jpg" alt="Гостиница Врата Дракона">
+                    
+                    <h3>Основание и расцвет</h3>
+                    <p>
+                        В далёком 756 году, во времена расцвета династии Тан, на Великом Шёлковом пути появилась 
+                        гостиница «Врата Дракона». Её основатель, мастер Ли Вэньхуа, был известным торговцем чаем, 
+                        который решил создать место, где путники могли бы найти убежище от суровых дорог.
+                    </p>
+                    <p>
+                        Гостиница расположилась у подножия гор Цинлин, в стратегически важном месте. Здесь 
+                        останавливались купцы, путешественники, поэты и даже императорские чиновники.
+                    </p>
+
+                    <blockquote>
+                        <p>
+                            «В этих стенах каждый камень хранит историю тысячи путешествий, 
+                            каждая балка помнит смех и слёзы странников со всех концов Поднебесной.»
+                        </p>
+                        <footer>— Из записей поэта Ван Вэя, 762 год</footer>
+                    </blockquote>
+                </section>
+
+                <section>
+                    <h3>Архитектурные особенности</h3>
+                    
+                    <img src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/962f1e84-5fc0-43aa-ac94-bf2c85d2f65b.jpg" alt="Внутренний двор гостиницы" class="float-right">
+                    
+                    <p>
+                        Гостиница построена в традиционном стиле с соблюдением принципов фэншуй. 
+                        Главные особенности архитектуры:
+                    </p>
+
+                    <ul>
+                        <li>Изогнутые крыши с керамической черепицей для защиты от злых духов</li>
+                        <li>Центральный двор с садом камней и прудом с карпами кои</li>
+                        <li>Красные деревянные колонны из ценного сандала</li>
+                        <li>Бумажные фонари ручной работы вдоль всех галерей</li>
+                        <li>Резные драконы на балках для привлечения удачи</li>
+                    </ul>
+
+                    <p class="clear-both">
+                        Особое внимание уделялось комфорту гостей. В каждом номере были установлены отопительные 
+                        системы «кан» — тёплые лежанки из кирпича, а также чайные столики из бамбука.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Знаменитые гости</h3>
+                    
+                    <p>
+                        За столетия через гостиницу прошли тысячи выдающихся личностей:
+                    </p>
+
+                    <ol>
+                        <li><strong>Сюань-цзан (845 г.)</strong> — буддийский монах, вернувшийся из Индии с священными текстами</li>
+                        <li><strong>Марко Поло (1275 г.)</strong> — венецианский путешественник, описавший гостиницу в своих записках</li>
+                        <li><strong>Чжэн Хэ (1421 г.)</strong> — великий мореплаватель династии Мин</li>
+                        <li><strong>Маттео Риччи (1601 г.)</strong> — итальянский миссионер и картограф</li>
+                    </ol>
+
+                    <blockquote>
+                        <p>
+                            «Нигде в Китае я не встречал такого гостеприимства. Хозяин знал секрет 
+                            настоящего чая, а его жена готовила лучшие баоцзы в провинции.»
+                        </p>
+                        <footer>— Из дневника Марко Поло</footer>
+                    </blockquote>
+                </section>
+
+                <aside>
+                    <h4>Интересный факт</h4>
+                    <p>
+                        В 1127 году, во время нашествия чжурчжэней, гостиница укрыла более 200 беженцев 
+                        в своих подвалах. За этот подвиг император династии Сун лично наградил владельца 
+                        шёлковым свитком с каллиграфией «Добродетель превыше богатства».
+                    </p>
+                </aside>
+
+                <section>
+                    <h3>Наследие</h3>
+                    <p>
+                        Сегодня «Врата Дракона» остаётся символом традиционного китайского гостеприимства. 
+                        Гостиница была полностью отреставрирована в 2005 году с сохранением всех исторических 
+                        элементов. Она внесена в список национального наследия Китая и продолжает принимать 
+                        гостей со всего мира.
+                    </p>
+                    <p>
+                        Легенды гласят, что в полнолуние можно услышать эхо древних разговоров в коридорах, 
+                        а в саду иногда появляется призрачная фигура основателя, наблюдающего за своим детищем.
+                    </p>
+                </section>
+            </div>
+
+            <footer>
+                <p>
+                    Автор: Чэнь Мэйлин, историк династий Тан и Сун<br>
+                    Источники: Императорские архивы, записи путешественников, археологические данные
+                </p>
+            </footer>
+        </article>
+
+        <div class="grid">
+            <section class="form-section">
+                <header class="section-header">
+                    <h2>Регистрация в системе</h2>
+                    <p>Создайте аккаунт для управления бронированием</p>
+                </header>
+
+                <form>
+                    <div class="form-group">
+                        <label for="fullname">ФИО</label>
+                        <input 
+                            type="text" 
+                            id="fullname" 
+                            name="fullname" 
+                            placeholder="Иванов Иван Иванович"
+                            required 
+                            minlength="3"
+                        >
+                        <span class="form-hint">Введите полное имя</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="example@longmen.cn"
+                            required
+                        >
+                        <span class="form-hint">Введите действующий адрес электронной почты</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Минимум 8 символов"
+                            required 
+                            minlength="8"
+                        >
+                        <span class="form-hint">Пароль должен содержать не менее 8 символов</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Подтверждение пароля</label>
+                        <input 
+                            type="password" 
+                            id="confirm-password" 
+                            name="confirm-password" 
+                            placeholder="Повторите пароль"
+                            required 
+                            minlength="8"
+                        >
+                        <span class="form-hint">Пароли должны совпадать</span>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            Я согласен с 
+                            <a href="#terms">условиями пользовательского соглашения</a> 
+                            и 
+                            <a href="#privacy">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </section>
+
+            <section class="card-section">
+                <header class="section-header">
+                    <h2>Управляющий гостиницей</h2>
+                    <p>Информация о текущем дежурном администраторе</p>
+                </header>
+
+                <div class="user-card">
+                    <div class="user-avatar">
+                        <img src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/981858a9-711e-4712-81e3-d7b0fcb74866.jpg" alt="Ли Мэй - управляющий гостиницей">
+                        <span class="status-indicator"></span>
+                    </div>
+
+                    <div class="user-info">
+                        <div class="user-header">
+                            <h3>Ли Мэй (李梅)</h3>
+                            <span class="status-badge">В сети</span>
+                        </div>
+
+                        <p class="user-role">
+                            <strong>Должность:</strong> Старший администратор
+                        </p>
+
+                        <p class="user-description">
+                            Потомственный управляющий в 8-м поколении семьи Ли. Знаток традиций династии Тан, 
+                            специалист по чайным церемониям и фэншуй.
+                        </p>
+
+                        <div class="user-tags">
+                            <span>Опыт: 15 лет</span>
+                            <span>Языки: 中文, EN, РУ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule-box">
+                    <h4>График работы:</h4>
+                    <p>
+                        Понедельник - Пятница: 08:00 - 20:00<br>
+                        Суббота - Воскресенье: 10:00 - 18:00
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 756-2024 Гостиница «Врата Дракона» • Провинция Шэньси, Китай</p>
+            <p>Объект культурного наследия под защитой ЮНЕСКО</p>
+        </div>
+    </footer>
+</body>
+</html>
