@@ -3,249 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>龙门客栈 - Гостиница «Врата Дракона»</title>
+    <title>Schloss Rabenstein - Замок Рабенштайн</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- Шапка сайта с названием замка -->
+    <header class="site-header">
         <div class="container">
-            <h1>龙门客栈</h1>
-            <p>Гостиница «Врата Дракона»</p>
+            <h1 class="site-title">Schloss Rabenstein</h1>
+            <p class="site-subtitle">Замок Рабенштайн — Легендарная готическая гостиница</p>
         </div>
     </header>
 
-    <main class="container">
-        <article>
-            <header>
-                <h2>История легендарной гостиницы</h2>
-                <p>Опубликовано: 15 октября 1368 года династии Мин</p>
-            </header>
+    <!-- Основной контент страницы -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Статья об истории замка -->
+            <article class="castle-article">
+                <!-- Заголовок статьи -->
+                <header class="article-header">
+                    <h2 class="article-title">История легендарного замка</h2>
+                    <p class="article-date">Опубликовано: 12 ноября 1142 года, эпоха Средневековья</p>
+                </header>
 
-            <div class="article-content">
-                <section>
-                    <img src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/1321d2bc-a730-481f-8494-f54f9687e555.jpg" alt="Гостиница Врата Дракона">
-                    
-                    <h3>Основание и расцвет</h3>
-                    <p>
-                        В далёком 756 году, во времена расцвета династии Тан, на Великом Шёлковом пути появилась 
-                        гостиница «Врата Дракона». Её основатель, мастер Ли Вэньхуа, был известным торговцем чаем, 
-                        который решил создать место, где путники могли бы найти убежище от суровых дорог.
-                    </p>
-                    <p>
-                        Гостиница расположилась у подножия гор Цинлин, в стратегически важном месте. Здесь 
-                        останавливались купцы, путешественники, поэты и даже императорские чиновники.
-                    </p>
-
-                    <blockquote>
-                        <p>
-                            «В этих стенах каждый камень хранит историю тысячи путешествий, 
-                            каждая балка помнит смех и слёзы странников со всех концов Поднебесной.»
+                <!-- Содержимое статьи -->
+                <div class="article-content">
+                    <!-- Секция: Основание и расцвет -->
+                    <section class="article-section">
+                        <!-- Главное изображение замка -->
+                        <img 
+                            src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/0a271d4c-9c61-47ef-9f54-ace6caf5d941.jpg" 
+                            alt="Мистический готический замок Рабенштайн" 
+                            class="article-image main-image"
+                        />
+                        
+                        <h3 class="section-title">Основание и расцвет</h3>
+                        <p class="section-text">
+                            В далёком 1142 году, во времена Священной Римской империи, на скалистом утёсе в Баварии 
+                            был возведён замок Рабенштайн. Его основатель, рыцарь Конрад фон Штайнберг, построил эту 
+                            крепость как стратегический пункт на торговом пути, соединяющем север и юг империи.
                         </p>
-                        <footer>— Из записей поэта Ван Вэя, 762 год</footer>
-                    </blockquote>
-                </section>
-
-                <section>
-                    <h3>Архитектурные особенности</h3>
-                    
-                    <img src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/962f1e84-5fc0-43aa-ac94-bf2c85d2f65b.jpg" alt="Внутренний двор гостиницы" class="float-right">
-                    
-                    <p>
-                        Гостиница построена в традиционном стиле с соблюдением принципов фэншуй. 
-                        Главные особенности архитектуры:
-                    </p>
-
-                    <ul>
-                        <li>Изогнутые крыши с керамической черепицей для защиты от злых духов</li>
-                        <li>Центральный двор с садом камней и прудом с карпами кои</li>
-                        <li>Красные деревянные колонны из ценного сандала</li>
-                        <li>Бумажные фонари ручной работы вдоль всех галерей</li>
-                        <li>Резные драконы на балках для привлечения удачи</li>
-                    </ul>
-
-                    <p class="clear-both">
-                        Особое внимание уделялось комфорту гостей. В каждом номере были установлены отопительные 
-                        системы «кан» — тёплые лежанки из кирпича, а также чайные столики из бамбука.
-                    </p>
-                </section>
-
-                <section>
-                    <h3>Знаменитые гости</h3>
-                    
-                    <p>
-                        За столетия через гостиницу прошли тысячи выдающихся личностей:
-                    </p>
-
-                    <ol>
-                        <li><strong>Сюань-цзан (845 г.)</strong> — буддийский монах, вернувшийся из Индии с священными текстами</li>
-                        <li><strong>Марко Поло (1275 г.)</strong> — венецианский путешественник, описавший гостиницу в своих записках</li>
-                        <li><strong>Чжэн Хэ (1421 г.)</strong> — великий мореплаватель династии Мин</li>
-                        <li><strong>Маттео Риччи (1601 г.)</strong> — итальянский миссионер и картограф</li>
-                    </ol>
-
-                    <blockquote>
-                        <p>
-                            «Нигде в Китае я не встречал такого гостеприимства. Хозяин знал секрет 
-                            настоящего чая, а его жена готовила лучшие баоцзы в провинции.»
+                        <p class="section-text">
+                            Замок расположился на высоте 850 метров над уровнем моря, среди дремучих лесов Шварцвальда. 
+                            Здесь останавливались купцы, рыцари, монахи и даже императорские послы, ищущие приют в 
+                            суровых горах.
                         </p>
-                        <footer>— Из дневника Марко Поло</footer>
-                    </blockquote>
+
+                        <!-- Цитата -->
+                        <blockquote class="quote-block">
+                            <p class="quote-text">
+                                «Эти готические стены хранят тайны столетий, а каждая башня помнит клятвы рыцарей 
+                                и шёпот монахов, искавших здесь убежище от бурь времени.»
+                            </p>
+                            <footer class="quote-author">
+                                — Из хроник монаха Бернарда Клервоского, 1153 год
+                            </footer>
+                        </blockquote>
+                    </section>
+
+                    <!-- Секция: Архитектурные особенности -->
+                    <section class="article-section">
+                        <h3 class="section-title">Архитектурные особенности</h3>
+                        
+                        <!-- Изображение парадного зала (плавающее справа на десктопе) -->
+                        <img 
+                            src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/b2bd0312-0de5-47ed-889d-43f8de965f8d.jpg" 
+                            alt="Парадный зал замка" 
+                            class="article-image float-image"
+                        />
+                        
+                        <p class="section-text">
+                            Замок построен в готическом стиле с элементами романской архитектуры. 
+                            Главные особенности строения:
+                        </p>
+
+                        <!-- Список архитектурных особенностей -->
+                        <ul class="feature-list">
+                            <li>Остроконечные готические арки с каменной резьбой</li>
+                            <li>Центральный двор с колодцем глубиной 60 метров</li>
+                            <li>Массивные дубовые балки из 600-летних деревьев</li>
+                            <li>Кованые железные факелы вдоль каменных коридоров</li>
+                            <li>Витражные окна с гербами знатных семей</li>
+                        </ul>
+
+                        <p class="section-text clear-text">
+                            Особое внимание уделялось защите и комфорту. В каждом зале были установлены 
+                            массивные камины из чёрного гранита, а стены покрыты гобеленами ручной работы, 
+                            защищающими от холода.
+                        </p>
+
+                        <!-- Изображение номера -->
+                        <img 
+                            src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/1e0c32c5-2afb-4236-a54b-c437bff33263.jpg" 
+                            alt="Роскошный номер в замке" 
+                            class="article-image"
+                        />
+
+                        <p class="section-text">
+                            Каждый из 24 номеров замка сочетает средневековую атмосферу с современным комфортом. 
+                            Кровати с балдахинами, антикварная мебель и панорамные готические окна создают 
+                            неповторимое ощущение путешествия во времени.
+                        </p>
+                    </section>
+
+                    <!-- Секция: Знаменитые гости -->
+                    <section class="article-section">
+                        <h3 class="section-title">Знаменитые гости</h3>
+                        
+                        <p class="section-text">
+                            За столетия в замке останавливались выдающиеся исторические личности:
+                        </p>
+
+                        <!-- Нумерованный список гостей -->
+                        <ol class="guest-list">
+                            <li><strong>Фридрих Барбаросса (1167 г.)</strong> — император Священной Римской империи, ночевал здесь во время похода</li>
+                            <li><strong>Вольфрам фон Эшенбах (1205 г.)</strong> — легендарный миннезингер, написавший здесь часть «Парцифаля»</li>
+                            <li><strong>Мартин Лютер (1521 г.)</strong> — реформатор, укрывался в замке после Вормского рейхстага</li>
+                            <li><strong>Иоганн Вольфганг фон Гёте (1786 г.)</strong> — поэт и мыслитель, черпавший вдохновение в готической атмосфере</li>
+                        </ol>
+
+                        <!-- Цитата от Гёте -->
+                        <blockquote class="quote-block">
+                            <p class="quote-text">
+                                «Нигде в Германии я не встречал такой мистической атмосферы. Хозяин замка 
+                                знал секреты средневековых легенд, а его супруга варила лучший глинтвейн в Баварии.»
+                            </p>
+                            <footer class="quote-author">
+                                — Из путевых заметок Гёте
+                            </footer>
+                        </blockquote>
+                    </section>
+
+                    <!-- Интересный факт (боковой блок) -->
+                    <aside class="fact-box">
+                        <h4 class="fact-title">Интересный факт</h4>
+                        <p class="fact-text">
+                            В 1348 году, во время эпидемии чумы, замок стал убежищем для более 150 жителей 
+                            окрестных деревень. Благодаря изолированному расположению и чистой родниковой воде 
+                            никто из укрывшихся не заболел. За это владелец замка получил от императора Карла IV 
+                            грамоту с надписью «Милосердие превыше золота».
+                        </p>
+                    </aside>
+
+                    <!-- Секция: Наследие -->
+                    <section class="article-section">
+                        <h3 class="section-title">Наследие</h3>
+                        <p class="section-text">
+                            Сегодня замок Рабенштайн остаётся жемчужиной готической архитектуры Германии. 
+                            Полная реставрация была завершена в 2010 году с сохранением всех исторических 
+                            элементов и средневекового духа. Замок внесён в список объектов всемирного наследия 
+                            ЮНЕСКО и продолжает принимать гостей со всего мира.
+                        </p>
+                        <p class="section-text">
+                            Легенды гласят, что в полнолуние можно услышать звон мечей в оружейной, 
+                            а в библиотеке иногда появляется призрак средневекового монаха, читающего 
+                            древние манускрипты при свечах.
+                        </p>
+                    </section>
+                </div>
+
+                <!-- Подвал статьи с информацией об авторе -->
+                <footer class="article-footer">
+                    <p class="article-credits">
+                        Автор: Доктор Ганс Мюллер, историк средневековой Германии<br />
+                        Источники: Архивы Священной Римской империи, хроники монастырей, археологические исследования
+                    </p>
+                </footer>
+            </article>
+
+            <!-- Сетка с формой и карточкой управляющего -->
+            <div class="grid-section">
+                <!-- Форма регистрации -->
+                <section class="form-section">
+                    <header class="section-header">
+                        <h2 class="section-heading">Регистрация в системе</h2>
+                        <p class="section-description">Создайте аккаунт для управления бронированием</p>
+                    </header>
+
+                    <!-- Форма с полями ввода -->
+                    <form class="registration-form">
+                        <!-- Поле: ФИО -->
+                        <div class="form-group">
+                            <label for="fullname" class="form-label">ФИО</label>
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                required
+                                minlength="3"
+                                class="form-input"
+                                placeholder="Иванов Иван Иванович"
+                            />
+                            <span class="form-hint">Введите полное имя</span>
+                        </div>
+
+                        <!-- Поле: Email -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">Электронная почта</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                class="form-input"
+                                placeholder="example@rabenstein.de"
+                            />
+                            <span class="form-hint">Введите действующий адрес электронной почты</span>
+                        </div>
+
+                        <!-- Поле: Пароль -->
+                        <div class="form-group">
+                            <label for="password" class="form-label">Пароль</label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                required
+                                minlength="8"
+                                class="form-input"
+                                placeholder="Минимум 8 символов"
+                            />
+                            <span class="form-hint">Пароль должен содержать не менее 8 символов</span>
+                        </div>
+
+                        <!-- Поле: Подтверждение пароля -->
+                        <div class="form-group">
+                            <label for="confirm-password" class="form-label">Подтверждение пароля</label>
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                name="confirm-password"
+                                required
+                                minlength="8"
+                                class="form-input"
+                                placeholder="Повторите пароль"
+                            />
+                            <span class="form-hint">Пароли должны совпадать</span>
+                        </div>
+
+                        <!-- Чекбокс: Согласие с условиями -->
+                        <div class="checkbox-group">
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required
+                                class="form-checkbox"
+                            />
+                            <label for="terms" class="checkbox-label">
+                                Я согласен с 
+                                <a href="#terms" class="form-link">условиями пользовательского соглашения</a> 
+                                и 
+                                <a href="#privacy" class="form-link">политикой конфиденциальности</a>
+                            </label>
+                        </div>
+
+                        <!-- Кнопка отправки формы -->
+                        <button type="submit" class="submit-button">
+                            Зарегистрироваться
+                        </button>
+                    </form>
                 </section>
 
-                <aside>
-                    <h4>Интересный факт</h4>
-                    <p>
-                        В 1127 году, во время нашествия чжурчжэней, гостиница укрыла более 200 беженцев 
-                        в своих подвалах. За этот подвиг император династии Сун лично наградил владельца 
-                        шёлковым свитком с каллиграфией «Добродетель превыше богатства».
-                    </p>
-                </aside>
+                <!-- Карточка управляющего замком -->
+                <section class="manager-section">
+                    <header class="section-header">
+                        <h2 class="section-heading">Управляющая замком</h2>
+                        <p class="section-description">Информация о текущем администраторе</p>
+                    </header>
 
-                <section>
-                    <h3>Наследие</h3>
-                    <p>
-                        Сегодня «Врата Дракона» остаётся символом традиционного китайского гостеприимства. 
-                        Гостиница была полностью отреставрирована в 2005 году с сохранением всех исторических 
-                        элементов. Она внесена в список национального наследия Китая и продолжает принимать 
-                        гостей со всего мира.
-                    </p>
-                    <p>
-                        Легенды гласят, что в полнолуние можно услышать эхо древних разговоров в коридорах, 
-                        а в саду иногда появляется призрачная фигура основателя, наблюдающего за своим детищем.
-                    </p>
+                    <!-- Карточка пользователя -->
+                    <div class="user-card">
+                        <div class="user-card-inner">
+                            <!-- Аватар с индикатором онлайн-статуса -->
+                            <div class="user-avatar-wrapper">
+                                <img
+                                    src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/fea7357f-9cee-4228-bdaf-2a117fbf1ed3.jpg"
+                                    alt="Фрау Элизабет Шмидт - управляющая замком"
+                                    class="user-avatar"
+                                />
+                                <span class="online-status"></span>
+                            </div>
+
+                            <!-- Информация о пользователе -->
+                            <div class="user-info">
+                                <div class="user-header">
+                                    <h3 class="user-name">Элизабет Шмидт</h3>
+                                    <span class="status-badge">В сети</span>
+                                </div>
+
+                                <p class="user-position">
+                                    <strong>Должность:</strong> Старший администратор
+                                </p>
+
+                                <p class="user-description">
+                                    Потомственная хранительница замка в 5-м поколении семьи Шмидт. Знаток средневековой 
+                                    истории, эксперт по готической архитектуре и традициям рыцарских орденов.
+                                </p>
+
+                                <!-- Теги с дополнительной информацией -->
+                                <div class="user-tags">
+                                    <span class="tag">Опыт: 18 лет</span>
+                                    <span class="tag">Языки: DE, EN, FR, RU</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- График работы -->
+                        <div class="schedule-box">
+                            <h4 class="schedule-title">График работы:</h4>
+                            <p class="schedule-text">
+                                Понедельник - Пятница: 08:00 - 20:00<br />
+                                Суббота - Воскресенье: 10:00 - 18:00
+                            </p>
+                        </div>
+                    </div>
                 </section>
             </div>
-
-            <footer>
-                <p>
-                    Автор: Чэнь Мэйлин, историк династий Тан и Сун<br>
-                    Источники: Императорские архивы, записи путешественников, археологические данные
-                </p>
-            </footer>
-        </article>
-
-        <div class="grid">
-            <section class="form-section">
-                <header class="section-header">
-                    <h2>Регистрация в системе</h2>
-                    <p>Создайте аккаунт для управления бронированием</p>
-                </header>
-
-                <form>
-                    <div class="form-group">
-                        <label for="fullname">ФИО</label>
-                        <input 
-                            type="text" 
-                            id="fullname" 
-                            name="fullname" 
-                            placeholder="Иванов Иван Иванович"
-                            required 
-                            minlength="3"
-                        >
-                        <span class="form-hint">Введите полное имя</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Электронная почта</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            placeholder="example@longmen.cn"
-                            required
-                        >
-                        <span class="form-hint">Введите действующий адрес электронной почты</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Пароль</label>
-                        <input 
-                            type="password" 
-                            id="password" 
-                            name="password" 
-                            placeholder="Минимум 8 символов"
-                            required 
-                            minlength="8"
-                        >
-                        <span class="form-hint">Пароль должен содержать не менее 8 символов</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="confirm-password">Подтверждение пароля</label>
-                        <input 
-                            type="password" 
-                            id="confirm-password" 
-                            name="confirm-password" 
-                            placeholder="Повторите пароль"
-                            required 
-                            minlength="8"
-                        >
-                        <span class="form-hint">Пароли должны совпадать</span>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">
-                            Я согласен с 
-                            <a href="#terms">условиями пользовательского соглашения</a> 
-                            и 
-                            <a href="#privacy">политикой конфиденциальности</a>
-                        </label>
-                    </div>
-
-                    <button type="submit">Зарегистрироваться</button>
-                </form>
-            </section>
-
-            <section class="card-section">
-                <header class="section-header">
-                    <h2>Управляющий гостиницей</h2>
-                    <p>Информация о текущем дежурном администраторе</p>
-                </header>
-
-                <div class="user-card">
-                    <div class="user-avatar">
-                        <img src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/981858a9-711e-4712-81e3-d7b0fcb74866.jpg" alt="Ли Мэй - управляющий гостиницей">
-                        <span class="status-indicator"></span>
-                    </div>
-
-                    <div class="user-info">
-                        <div class="user-header">
-                            <h3>Ли Мэй (李梅)</h3>
-                            <span class="status-badge">В сети</span>
-                        </div>
-
-                        <p class="user-role">
-                            <strong>Должность:</strong> Старший администратор
-                        </p>
-
-                        <p class="user-description">
-                            Потомственный управляющий в 8-м поколении семьи Ли. Знаток традиций династии Тан, 
-                            специалист по чайным церемониям и фэншуй.
-                        </p>
-
-                        <div class="user-tags">
-                            <span>Опыт: 15 лет</span>
-                            <span>Языки: 中文, EN, РУ</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="schedule-box">
-                    <h4>График работы:</h4>
-                    <p>
-                        Понедельник - Пятница: 08:00 - 20:00<br>
-                        Суббота - Воскресенье: 10:00 - 18:00
-                    </p>
-                </div>
-            </section>
         </div>
     </main>
 
-    <footer>
+    <!-- Подвал сайта -->
+    <footer class="site-footer">
         <div class="container">
-            <p>© 756-2024 Гостиница «Врата Дракона» • Провинция Шэньси, Китай</p>
-            <p>Объект культурного наследия под защитой ЮНЕСКО</p>
+            <p class="footer-text">
+                © 1142-2024 Замок Рабенштайн • Бавария, Германия
+            </p>
+            <p class="footer-subtext">
+                Объект культурного наследия под защитой ЮНЕСКО
+            </p>
         </div>
     </footer>
 </body>

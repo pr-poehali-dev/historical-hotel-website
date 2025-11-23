@@ -1,309 +1,434 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans:wght@300;400;500;600&display=swap");
+/* ============================================
+   ИМПОРТ ШРИФТОВ
+   Готические шрифты для средневековой атмосферы
+   ============================================ */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;500;600&display=swap");
 
+/* ============================================
+   БАЗОВЫЕ СТИЛИ И RESET
+   Сброс стандартных отступов браузера
+   ============================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ============================================
+   CSS ПЕРЕМЕННЫЕ (ЦВЕТОВАЯ СХЕМА)
+   Готическая темная палитра для замка
+   ============================================ */
 :root {
-  --bg-color: #f5f1e8;
-  --card-bg: #ffffff;
-  --primary: #dc2626;
-  --primary-dark: #991b1b;
-  --secondary: #f59e0b;
-  --text: #1f2937;
-  --text-muted: #6b7280;
-  --accent: #fef3c7;
-  --border: #e5d4a3;
-  --input-border: #d4c5a0;
+  /* Основной фон - темный серо-синий */
+  --bg-color: hsl(240, 10%, 15%);
+  /* Текст - светло-бежевый */
+  --text-color: hsl(40, 20%, 90%);
+
+  /* Фон карточек - темнее основного */
+  --card-bg: hsl(240, 15%, 12%);
+
+  /* Акцентный цвет - золотисто-оранжевый */
+  --primary-color: hsl(30, 80%, 45%);
+  /* Текст на акцентном фоне - темный */
+  --primary-text: hsl(240, 15%, 10%);
+
+  /* Вторичный цвет - светлое золото */
+  --secondary-color: hsl(40, 50%, 55%);
+
+  /* Приглушенный фон - темно-серый */
+  --muted-bg: hsl(240, 12%, 20%);
+  /* Приглушенный текст */
+  --muted-text: hsl(40, 15%, 60%);
+
+  /* Цвет для подсветки/акцентов */
+  --accent-color: hsl(30, 70%, 35%);
+
+  /* Границы */
+  --border-color: hsl(30, 40%, 30%);
+
+  /* Радиус скругления */
+  --radius: 0.75rem;
 }
 
+/* ============================================
+   БАЗОВЫЕ СТИЛИ BODY
+   Шрифты и фон страницы
+   ============================================ */
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   background-color: var(--bg-color);
-  color: var(--text);
+  color: var(--text-color);
   line-height: 1.6;
 }
 
+/* Заголовки используют готический шрифт */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif SC", serif;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
 }
 
+/* ============================================
+   КОНТЕЙНЕР
+   Ограничивает ширину контента и центрирует
+   ============================================ */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-header {
-  background-color: var(--primary);
-  color: var(--accent);
+/* ============================================
+   ШАПКА САЙТА
+   Верхняя панель с названием замка
+   ============================================ */
+.site-header {
+  background-color: var(--primary-color);
+  color: var(--primary-text);
   padding: 1.5rem 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-bottom: 4px solid var(--secondary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-bottom: 4px solid var(--secondary-color);
 }
 
-header h1 {
+.site-title {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.05em;
 }
 
-header p {
+.site-subtitle {
   text-align: center;
   margin-top: 0.5rem;
   font-size: 1rem;
   opacity: 0.9;
 }
 
-main {
+/* ============================================
+   ОСНОВНОЙ КОНТЕНТ
+   Отступы для главного блока
+   ============================================ */
+.main-content {
   padding: 3rem 0;
 }
 
-article {
+/* ============================================
+   СТАТЬЯ О ЗАМКЕ
+   Основной блок с историей
+   ============================================ */
+.castle-article {
   background: var(--card-bg);
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   margin-bottom: 3rem;
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--secondary-color);
 }
 
-article header {
-  background-color: var(--primary);
-  color: var(--accent);
+/* Заголовок статьи */
+.article-header {
+  background-color: var(--primary-color);
+  color: var(--primary-text);
   padding: 2rem;
-  border-bottom: none;
-  box-shadow: none;
 }
 
-article header h2 {
+.article-title {
   font-size: 1.875rem;
   margin-bottom: 0.5rem;
 }
 
-article header p {
-  text-align: left;
+.article-date {
   font-size: 0.875rem;
   opacity: 0.9;
 }
 
+/* Контент статьи */
 .article-content {
   padding: 2rem;
 }
 
-.article-content section {
+/* Секции внутри статьи */
+.article-section {
   margin-bottom: 2rem;
 }
 
-.article-content img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
-}
-
-.article-content h3 {
+/* Заголовки секций */
+.section-title {
   font-size: 1.5rem;
-  color: var(--primary);
+  color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
-.article-content p {
+/* Текст внутри секций */
+.section-text {
   margin-bottom: 1rem;
   line-height: 1.75;
 }
 
-blockquote {
-  border-left: 4px solid var(--secondary);
-  background-color: var(--accent);
+/* Текст с очисткой float */
+.clear-text {
+  clear: both;
+}
+
+/* ============================================
+   ИЗОБРАЖЕНИЯ В СТАТЬЕ
+   Фотографии замка и интерьеров
+   ============================================ */
+.article-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+/* Главное изображение (большое) */
+.main-image {
+  height: 400px;
+}
+
+/* Плавающее изображение (справа на десктопе) */
+.float-image {
+  height: 320px;
+}
+
+/* ============================================
+   ЦИТАТЫ
+   Блоки с высказываниями исторических личностей
+   ============================================ */
+.quote-block {
+  border-left: 4px solid var(--secondary-color);
+  background-color: var(--accent-color);
   padding: 1.5rem;
   margin: 1.5rem 0;
   border-radius: 0 0.5rem 0.5rem 0;
   font-style: italic;
 }
 
-blockquote p {
+.quote-text {
   font-size: 1.125rem;
-  color: var(--text);
+  color: var(--text-color);
 }
 
-blockquote footer {
+.quote-author {
   text-align: right;
   margin-top: 1rem;
   font-size: 0.875rem;
   font-weight: 600;
+  font-style: normal;
 }
 
-ul,
-ol {
+/* ============================================
+   СПИСКИ
+   Маркированные и нумерованные списки
+   ============================================ */
+.feature-list,
+.guest-list {
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-ul li,
-ol li {
+.feature-list li,
+.guest-list li {
   margin-bottom: 0.5rem;
+  line-height: 1.6;
 }
 
-aside {
-  background-color: var(--accent);
+.feature-list {
+  list-style-type: disc;
+}
+
+.guest-list {
+  list-style-type: decimal;
+}
+
+/* ============================================
+   БЛОК "ИНТЕРЕСНЫЙ ФАКТ"
+   Боковая информация
+   ============================================ */
+.fact-box {
+  background-color: var(--muted-bg);
   padding: 1.5rem;
   border-radius: 0.5rem;
   margin: 2rem 0;
-  border-left: 4px solid var(--primary);
+  border-left: 4px solid var(--primary-color);
 }
 
-aside h4 {
+.fact-title {
   font-size: 1.25rem;
-  color: var(--primary);
+  color: var(--primary-color);
   margin-bottom: 0.75rem;
 }
 
-aside p {
-  color: var(--text-muted);
+.fact-text {
+  color: var(--muted-text);
+  line-height: 1.7;
 }
 
-article footer {
-  background-color: var(--accent);
+/* ============================================
+   ПОДВАЛ СТАТЬИ
+   Информация об авторе
+   ============================================ */
+.article-footer {
+  background-color: var(--muted-bg);
   padding: 1.5rem 2rem;
-  border-top: 2px solid var(--border);
-  font-size: 0.875rem;
-  color: var(--text-muted);
+  border-top: 2px solid var(--border-color);
 }
 
-.grid {
+.article-credits {
+  font-size: 0.875rem;
+  color: var(--muted-text);
+  line-height: 1.6;
+}
+
+/* ============================================
+   СЕТКА (ФОРМА + КАРТОЧКА)
+   Двухколоночный layout на больших экранах
+   ============================================ */
+.grid-section {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   margin-bottom: 3rem;
 }
 
+/* ============================================
+   СЕКЦИИ ФОРМЫ И КАРТОЧКИ
+   Общие стили для обеих колонок
+   ============================================ */
 .form-section,
-.card-section {
+.manager-section {
   background: var(--card-bg);
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   padding: 2rem;
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--secondary-color);
 }
 
+/* Заголовки секций */
 .section-header {
   margin-bottom: 1.5rem;
 }
 
-.section-header h2 {
+.section-heading {
   font-size: 1.5rem;
-  color: var(--primary);
+  color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
-.section-header p {
+.section-description {
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--muted-text);
 }
 
-form {
+/* ============================================
+   ФОРМА РЕГИСТРАЦИИ
+   Поля ввода и кнопка отправки
+   ============================================ */
+.registration-form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
 
+/* Группа полей формы */
 .form-group {
   display: flex;
   flex-direction: column;
 }
 
-label {
+/* Метки полей */
+.form-label {
   font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--text);
+  color: var(--text-color);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+/* Поля ввода */
+.form-input {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 2px solid var(--input-border);
+  border: 2px solid var(--border-color);
   border-radius: 0.5rem;
   font-size: 1rem;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Lato", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   transition: all 0.2s;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
+/* Состояния полей ввода */
+.form-input:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(205, 127, 50, 0.2);
 }
 
-input[type="text"]:invalid,
-input[type="email"]:invalid,
-input[type="password"]:invalid {
-  border-color: var(--primary);
+.form-input:invalid:not(:placeholder-shown) {
+  border-color: #dc2626;
 }
 
-input[type="text"]:valid,
-input[type="email"]:valid,
-input[type="password"]:valid {
-  border-color: var(--primary);
+.form-input:valid {
+  border-color: var(--primary-color);
 }
 
+/* Подсказки под полями */
 .form-hint {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--muted-text);
   margin-top: 0.25rem;
 }
 
+/* ============================================
+   ЧЕКБОКС И ЕГО МЕТКА
+   Согласие с условиями
+   ============================================ */
 .checkbox-group {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
 }
 
-input[type="checkbox"] {
+.form-checkbox {
   width: 1rem;
   height: 1rem;
   margin-top: 0.25rem;
   cursor: pointer;
-  accent-color: var(--primary);
+  accent-color: var(--primary-color);
 }
 
-.checkbox-group label {
+.checkbox-label {
   font-size: 0.875rem;
   font-weight: 400;
-  margin-bottom: 0;
   cursor: pointer;
   line-height: 1.5;
 }
 
-.checkbox-group a {
-  color: var(--primary);
+/* Ссылки в форме */
+.form-link {
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
 }
 
-.checkbox-group a:hover {
+.form-link:hover {
   text-decoration: underline;
 }
 
-button[type="submit"] {
+/* ============================================
+   КНОПКА ОТПРАВКИ ФОРМЫ
+   Основная кнопка действия
+   ============================================ */
+.submit-button {
   width: 100%;
-  background-color: var(--primary);
-  color: var(--accent);
+  background-color: var(--primary-color);
+  color: var(--primary-text);
   font-weight: 600;
   padding: 0.875rem 1.5rem;
   border: none;
@@ -311,73 +436,94 @@ button[type="submit"] {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  font-family: "Lato", sans-serif;
 }
 
-button[type="submit"]:hover {
-  background-color: var(--primary-dark);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.submit-button:hover {
+  opacity: 0.9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
 }
 
-button[type="submit"]:active {
+.submit-button:active {
   transform: translateY(0);
 }
 
+/* ============================================
+   КАРТОЧКА ПОЛЬЗОВАТЕЛЯ
+   Информация об управляющей замком
+   ============================================ */
 .user-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  background-color: var(--accent);
+  background-color: var(--muted-bg);
   border-radius: 0.5rem;
-  border: 2px solid var(--secondary);
+  padding: 1.5rem;
+  border: 2px solid var(--secondary-color);
   transition: all 0.3s;
   cursor: pointer;
 }
 
 .user-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   transform: scale(1.01);
 }
 
-.user-avatar {
+/* Внутренний контейнер карточки */
+.user-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   АВАТАР ПОЛЬЗОВАТЕЛЯ
+   Фото с индикатором онлайн-статуса
+   ============================================ */
+.user-avatar-wrapper {
   position: relative;
   flex-shrink: 0;
 }
 
-.user-avatar img {
+.user-avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--primary);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s;
 }
 
-.user-card:hover .user-avatar img {
-  border-color: var(--secondary);
+.user-card:hover .user-avatar {
+  border-color: var(--secondary-color);
 }
 
-.status-indicator {
+/* Индикатор онлайн (зеленая точка) */
+.online-status {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 1.25rem;
   height: 1.25rem;
   background-color: #10b981;
-  border: 2px solid white;
+  border: 2px solid var(--card-bg);
   border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* ============================================
+   ИНФОРМАЦИЯ О ПОЛЬЗОВАТЕЛЕ
+   Имя, должность, описание
+   ============================================ */
 .user-info {
   flex: 1;
   text-align: center;
   width: 100%;
 }
 
+/* Шапка с именем и статусом */
 .user-header {
   display: flex;
   flex-direction: column;
@@ -386,146 +532,170 @@ button[type="submit"]:active {
   margin-bottom: 0.75rem;
 }
 
-.user-header h3 {
+.user-name {
   font-size: 1.25rem;
-  color: var(--primary);
+  color: var(--primary-color);
   transition: color 0.3s;
 }
 
-.user-card:hover .user-header h3 {
-  color: var(--secondary);
+.user-card:hover .user-name {
+  color: var(--secondary-color);
 }
 
+/* Бейдж статуса */
 .status-badge {
   padding: 0.25rem 0.75rem;
-  background-color: var(--primary);
-  color: var(--accent);
+  background-color: var(--primary-color);
+  color: var(--primary-text);
   font-size: 0.75rem;
   font-weight: 600;
   border-radius: 1rem;
 }
 
-.user-role {
+/* Должность */
+.user-position {
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--text-color);
   margin-bottom: 0.75rem;
 }
 
+/* Описание пользователя */
 .user-description {
   font-size: 0.875rem;
-  color: var(--text);
+  color: var(--text-color);
   line-height: 1.6;
   margin-bottom: 0.75rem;
 }
 
+/* ============================================
+   ТЕГИ ПОЛЬЗОВАТЕЛЯ
+   Дополнительная информация (опыт, языки)
+   ============================================ */
 .user-tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  font-size: 0.75rem;
-  color: var(--text-muted);
 }
 
-.user-tags span {
+.tag {
   padding: 0.25rem 0.5rem;
-  background-color: rgba(245, 158, 11, 0.2);
+  background-color: rgba(205, 127, 50, 0.2);
   border-radius: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--text-color);
 }
 
+/* ============================================
+   ГРАФИК РАБОТЫ
+   Расписание администратора
+   ============================================ */
 .schedule-box {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background-color: var(--accent);
-  border-radius: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border-color);
 }
 
-.schedule-box h4 {
+.schedule-title {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--text-color);
   margin-bottom: 0.5rem;
 }
 
-.schedule-box p {
+.schedule-text {
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--muted-text);
+  line-height: 1.6;
 }
 
-footer {
-  background-color: var(--primary);
-  color: var(--accent);
+/* ============================================
+   ПОДВАЛ САЙТА
+   Нижняя панель с копирайтом
+   ============================================ */
+.site-footer {
+  background-color: var(--primary-color);
+  color: var(--primary-text);
   padding: 2rem 0;
   text-align: center;
-  border-top: 4px solid var(--secondary);
+  border-top: 4px solid var(--secondary-color);
 }
 
-footer p {
+.footer-text {
   font-size: 0.875rem;
   opacity: 0.9;
 }
 
-footer p:last-child {
+.footer-subtext {
   font-size: 0.75rem;
   margin-top: 0.5rem;
   opacity: 0.75;
 }
 
-.float-right {
-  float: right;
-  margin-left: 1.5rem;
-  max-width: 450px;
-}
-
-.clear-both {
-  clear: both;
-}
-
+/* ============================================
+   АДАПТИВНОСТЬ: МОБИЛЬНЫЕ УСТРОЙСТВА
+   От 640px - планшеты
+   ============================================ */
 @media (min-width: 640px) {
-  header h1 {
+  /* Увеличиваем размеры шрифтов */
+  .site-title {
     font-size: 2.5rem;
   }
 
-  header p {
+  .site-subtitle {
     font-size: 1.125rem;
   }
 
+  /* Увеличиваем отступы */
   .article-content {
     padding: 2.5rem;
   }
 
   .form-section,
-  .card-section {
+  .manager-section {
     padding: 2.5rem;
   }
 
-  .section-header h2 {
+  .section-heading {
     font-size: 1.75rem;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
+  /* Увеличиваем поля ввода */
+  .form-input {
     padding: 0.875rem 1rem;
   }
 }
 
+/* ============================================
+   АДАПТИВНОСТЬ: ПЛАНШЕТЫ И ДЕСКТОПЫ
+   От 768px - средние экраны
+   ============================================ */
 @media (min-width: 768px) {
-  header h1 {
+  /* Еще больше увеличиваем шрифты */
+  .site-title {
     font-size: 3rem;
   }
 
-  header p {
+  .site-subtitle {
     font-size: 1.25rem;
   }
 
+  /* Увеличиваем отступы контента */
   .article-content {
     padding: 3rem;
   }
 
-  .user-card {
+  /* Плавающее изображение справа */
+  .float-image {
+    float: right;
+    margin-left: 1.5rem;
+    max-width: 450px;
+    margin-bottom: 1rem;
+  }
+
+  /* Карточка пользователя - горизонтальный layout */
+  .user-card-inner {
     flex-direction: row;
-    text-align: left;
+    align-items: flex-start;
   }
 
   .user-info {
@@ -534,6 +704,7 @@ footer p:last-child {
 
   .user-header {
     flex-direction: row;
+    justify-content: flex-start;
   }
 
   .user-tags {
@@ -541,8 +712,13 @@ footer p:last-child {
   }
 }
 
+/* ============================================
+   АДАПТИВНОСТЬ: БОЛЬШИЕ ЭКРАНЫ
+   От 1024px - десктопы
+   ============================================ */
 @media (min-width: 1024px) {
-  .grid {
+  /* Двухколоночная сетка для формы и карточки */
+  .grid-section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
