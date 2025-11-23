@@ -4,44 +4,45 @@ const Index = () => {
 
       <header className="bg-primary text-primary-foreground py-4 sm:py-6 shadow-lg border-b-4 border-secondary">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center tracking-wide">龙门客栈</h1>
-          <p className="text-center text-sm sm:text-base md:text-lg mt-2 opacity-90">Гостиница «Врата Дракона»</p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center tracking-wide">Schloss Rabenstein</h1>
+          <p className="text-center text-sm sm:text-base md:text-lg mt-2 opacity-90">Замок Рабенштайн — Легендарная готическая гостиница</p>
         </div>
       </header>
 
       <main className="container mx-auto px-4 py-6 sm:py-8 md:py-12 max-w-6xl">
         <article className="mb-8 sm:mb-12 md:mb-16 bg-card rounded-lg shadow-xl overflow-hidden border-2 border-secondary">
           <header className="bg-primary text-primary-foreground p-4 sm:p-6 md:p-8">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">История легендарной гостиницы</h2>
-            <p className="text-xs sm:text-sm opacity-90">Опубликовано: 15 октября 1368 года династии Мин</p>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">История легендарного замка</h2>
+            <p className="text-xs sm:text-sm opacity-90">Опубликовано: 12 ноября 1142 года, эпоха Средневековья</p>
           </header>
 
           <div className="p-4 sm:p-6 md:p-8">
             <section className="mb-8">
               <img 
-                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/1321d2bc-a730-481f-8494-f54f9687e555.jpg" 
-                alt="Гостиница Врата Дракона" 
+                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/93f483ff-443c-478e-a891-3c372132d133.jpg" 
+                alt="Замок Рабенштайн на закате" 
                 className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-lg shadow-md mb-4 sm:mb-6"
               />
               
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Основание и расцвет</h3>
               <p className="mb-4 leading-relaxed text-foreground">
-                В далёком 756 году, во времена расцвета династии Тан, на Великом Шёлковом пути появилась 
-                гостиница «Врата Дракона». Её основатель, мастер Ли Вэньхуа, был известным торговцем чаем, 
-                который решил создать место, где путники могли бы найти убежище от суровых дорог.
+                В далёком 1142 году, во времена Священной Римской империи, на скалистом утёсе в Баварии 
+                был возведён замок Рабенштайн. Его основатель, рыцарь Конрад фон Штайнберг, построил эту 
+                крепость как стратегический пункт на торговом пути, соединяющем север и юг империи.
               </p>
               <p className="mb-4 leading-relaxed text-foreground">
-                Гостиница расположилась у подножия гор Цинлин, в стратегически важном месте. Здесь 
-                останавливались купцы, путешественники, поэты и даже императорские чиновники.
+                Замок расположился на высоте 850 метров над уровнем моря, среди дремучих лесов Шварцвальда. 
+                Здесь останавливались купцы, рыцари, монахи и даже императорские послы, ищущие приют в 
+                суровых горах.
               </p>
 
               <blockquote className="border-l-4 border-secondary bg-accent p-6 my-6 rounded-r-lg italic">
                 <p className="text-lg text-accent-foreground">
-                  «В этих стенах каждый камень хранит историю тысячи путешествий, 
-                  каждая балка помнит смех и слёзы странников со всех концов Поднебесной.»
+                  «Эти готические стены хранят тайны столетий, а каждая башня помнит клятвы рыцарей 
+                  и шёпот монахов, искавших здесь убежище от бурь времени.»
                 </p>
                 <footer className="text-right mt-4 text-sm font-semibold">
-                  — Из записей поэта Ван Вэя, 762 год
+                  — Из хроник монаха Бернарда Клервоского, 1153 год
                 </footer>
               </blockquote>
             </section>
@@ -50,27 +51,28 @@ const Index = () => {
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Архитектурные особенности</h3>
               
               <img 
-                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/962f1e84-5fc0-43aa-ac94-bf2c85d2f65b.jpg" 
-                alt="Внутренний двор гостиницы" 
+                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/a8d92435-2f7b-4664-828b-3af0a1620891.jpg" 
+                alt="Внутренний двор замка" 
                 className="w-full sm:float-right sm:ml-6 sm:max-w-xs md:max-w-md h-48 sm:h-60 md:h-80 object-cover rounded-lg shadow-md mb-4 sm:mb-6"
               />
               
               <p className="mb-4 leading-relaxed text-foreground">
-                Гостиница построена в традиционном стиле с соблюдением принципов фэншуй. 
-                Главные особенности архитектуры:
+                Замок построен в готическом стиле с элементами романской архитектуры. 
+                Главные особенности строения:
               </p>
 
               <ul className="list-disc list-inside space-y-2 mb-6 ml-4">
-                <li>Изогнутые крыши с керамической черепицей для защиты от злых духов</li>
-                <li>Центральный двор с садом камней и прудом с карпами кои</li>
-                <li>Красные деревянные колонны из ценного сандала</li>
-                <li>Бумажные фонари ручной работы вдоль всех галерей</li>
-                <li>Резные драконы на балках для привлечения удачи</li>
+                <li>Остроконечные готические арки с каменной резьбой</li>
+                <li>Центральный двор с колодцем глубиной 60 метров</li>
+                <li>Массивные дубовые балки из 600-летних деревьев</li>
+                <li>Кованые железные факелы вдоль каменных коридоров</li>
+                <li>Витражные окна с гербами знатных семей</li>
               </ul>
 
               <p className="mb-4 leading-relaxed text-foreground clear-both">
-                Особое внимание уделялось комфорту гостей. В каждом номере были установлены отопительные 
-                системы «кан» — тёплые лежанки из кирпича, а также чайные столики из бамбука.
+                Особое внимание уделялось защите и комфорту. В каждом зале были установлены 
+                массивные камины из чёрного гранита, а стены покрыты гобеленами ручной работы, 
+                защищающими от холода.
               </p>
             </section>
 
@@ -78,23 +80,23 @@ const Index = () => {
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Знаменитые гости</h3>
               
               <p className="mb-4 leading-relaxed text-foreground">
-                За столетия через гостиницу прошли тысячи выдающихся личностей:
+                За столетия в замке останавливались выдающиеся исторические личности:
               </p>
 
               <ol className="list-decimal list-inside space-y-3 mb-6 ml-4 text-foreground">
-                <li><strong>Сюань-цзан (845 г.)</strong> — буддийский монах, вернувшийся из Индии с священными текстами</li>
-                <li><strong>Марко Поло (1275 г.)</strong> — венецианский путешественник, описавший гостиницу в своих записках</li>
-                <li><strong>Чжэн Хэ (1421 г.)</strong> — великий мореплаватель династии Мин</li>
-                <li><strong>Маттео Риччи (1601 г.)</strong> — итальянский миссионер и картограф</li>
+                <li><strong>Фридрих Барбаросса (1167 г.)</strong> — император Священной Римской империи, ночевал здесь во время похода</li>
+                <li><strong>Вольфрам фон Эшенбах (1205 г.)</strong> — легендарный миннезингер, написавший здесь часть «Парцифаля»</li>
+                <li><strong>Мартин Лютер (1521 г.)</strong> — реформатор, укрывался в замке после Вормского рейхстага</li>
+                <li><strong>Иоганн Вольфганг фон Гёте (1786 г.)</strong> — поэт и мыслитель, черпавший вдохновение в готической атмосфере</li>
               </ol>
 
               <blockquote className="border-l-4 border-secondary bg-accent p-6 my-6 rounded-r-lg italic">
                 <p className="text-lg text-accent-foreground">
-                  «Нигде в Китае я не встречал такого гостеприимства. Хозяин знал секрет 
-                  настоящего чая, а его жена готовила лучшие баоцзы в провинции.»
+                  «Нигде в Германии я не встречал такой мистической атмосферы. Хозяин замка 
+                  знал секреты средневековых легенд, а его супруга варила лучший глинтвейн в Баварии.»
                 </p>
                 <footer className="text-right mt-4 text-sm font-semibold">
-                  — Из дневника Марко Поло
+                  — Из путевых заметок Гёте
                 </footer>
               </blockquote>
             </section>
@@ -102,31 +104,33 @@ const Index = () => {
             <aside className="bg-muted p-4 sm:p-6 rounded-lg my-6 sm:my-8 border-l-4 border-primary">
               <h4 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-primary">Интересный факт</h4>
               <p className="text-muted-foreground leading-relaxed">
-                В 1127 году, во время нашествия чжурчжэней, гостиница укрыла более 200 беженцев 
-                в своих подвалах. За этот подвиг император династии Сун лично наградил владельца 
-                шёлковым свитком с каллиграфией «Добродетель превыше богатства».
+                В 1348 году, во время эпидемии чумы, замок стал убежищем для более 150 жителей 
+                окрестных деревень. Благодаря изолированному расположению и чистой родниковой воде 
+                никто из укрывшихся не заболел. За это владелец замка получил от императора Карла IV 
+                грамоту с надписью «Милосердие превыше золота».
               </p>
             </aside>
 
             <section>
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Наследие</h3>
               <p className="mb-4 leading-relaxed text-foreground">
-                Сегодня «Врата Дракона» остаётся символом традиционного китайского гостеприимства. 
-                Гостиница была полностью отреставрирована в 2005 году с сохранением всех исторических 
-                элементов. Она внесена в список национального наследия Китая и продолжает принимать 
-                гостей со всего мира.
+                Сегодня замок Рабенштайн остаётся жемчужиной готической архитектуры Германии. 
+                Полная реставрация была завершена в 2010 году с сохранением всех исторических 
+                элементов и средневекового духа. Замок внесён в список объектов всемирного наследия 
+                ЮНЕСКО и продолжает принимать гостей со всего мира.
               </p>
               <p className="leading-relaxed text-foreground">
-                Легенды гласят, что в полнолуние можно услышать эхо древних разговоров в коридорах, 
-                а в саду иногда появляется призрачная фигура основателя, наблюдающего за своим детищем.
+                Легенды гласят, что в полнолуние можно услышать звон мечей в оружейной, 
+                а в библиотеке иногда появляется призрак средневекового монаха, читающего 
+                древние манускрипты при свечах.
               </p>
             </section>
           </div>
 
           <footer className="bg-muted p-4 sm:p-6 border-t-2 border-border">
             <p className="text-xs sm:text-sm text-muted-foreground">
-              Автор: Чэнь Мэйлин, историк династий Тан и Сун<br />
-              Источники: Императорские архивы, записи путешественников, археологические данные
+              Автор: Доктор Ганс Мюллер, историк средневековой Германии<br />
+              Источники: Архивы Священной Римской империи, хроники монастырей, археологические исследования
             </p>
           </footer>
         </article>
@@ -149,7 +153,7 @@ const Index = () => {
                   name="fullname"
                   required
                   minLength={3}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base bg-background"
                   placeholder="Иванов Иван Иванович"
                 />
                 <p className="text-xs text-muted-foreground mt-1">Введите полное имя</p>
@@ -164,8 +168,8 @@ const Index = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
-                  placeholder="example@longmen.cn"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base bg-background"
+                  placeholder="example@rabenstein.de"
                 />
                 <p className="text-xs text-muted-foreground mt-1">Введите действующий адрес электронной почты</p>
               </div>
@@ -180,7 +184,7 @@ const Index = () => {
                   name="password"
                   required
                   minLength={8}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base bg-background"
                   placeholder="Минимум 8 символов"
                 />
                 <p className="text-xs text-muted-foreground mt-1">Пароль должен содержать не менее 8 символов</p>
@@ -196,7 +200,7 @@ const Index = () => {
                   name="confirm-password"
                   required
                   minLength={8}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-primary transition-all duration-200 invalid:border-destructive valid:border-primary text-sm sm:text-base bg-background"
                   placeholder="Повторите пароль"
                 />
                 <p className="text-xs text-muted-foreground mt-1">Пароли должны совпадать</p>
@@ -206,16 +210,17 @@ const Index = () => {
                 <input
                   type="checkbox"
                   id="terms"
+                  name="terms"
                   required
-                  className="w-4 h-4 mt-1 text-primary border-2 border-input rounded focus:ring-2 focus:ring-ring cursor-pointer flex-shrink-0"
+                  className="w-4 h-4 mt-1 accent-primary cursor-pointer"
                 />
-                <label htmlFor="terms" className="text-xs sm:text-sm text-foreground cursor-pointer leading-relaxed">
+                <label htmlFor="terms" className="text-sm text-foreground leading-relaxed cursor-pointer">
                   Я согласен с{' '}
-                  <a href="#terms" className="text-primary hover:underline font-semibold">
+                  <a href="#terms" className="text-primary font-semibold hover:underline">
                     условиями пользовательского соглашения
-                  </a>
-                  {' '}и{' '}
-                  <a href="#privacy" className="text-primary hover:underline font-semibold">
+                  </a>{' '}
+                  и{' '}
+                  <a href="#privacy" className="text-primary font-semibold hover:underline">
                     политикой конфиденциальности
                   </a>
                 </label>
@@ -223,7 +228,7 @@ const Index = () => {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-primary-foreground font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-ring transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
+                className="w-full bg-primary text-primary-foreground font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 text-sm sm:text-base"
               >
                 Зарегистрироваться
               </button>
@@ -232,61 +237,63 @@ const Index = () => {
 
           <section className="bg-card rounded-lg shadow-xl p-4 sm:p-6 md:p-8 border-2 border-secondary">
             <header className="mb-4 sm:mb-6">
-              <h2 className="text-xl sm:text-2xl font-bold text-primary mb-2">Управляющий гостиницей</h2>
-              <p className="text-xs sm:text-sm text-muted-foreground">Информация о текущем дежурном администраторе</p>
+              <h2 className="text-xl sm:text-2xl font-bold text-primary mb-2">Управляющая замком</h2>
+              <p className="text-xs sm:text-sm text-muted-foreground">Информация о текущем администраторе</p>
             </header>
 
-            <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 p-4 sm:p-6 bg-accent rounded-lg border-2 border-secondary hover:shadow-lg transition-all duration-300 hover:scale-[1.01] cursor-pointer group">
-              <div className="relative flex-shrink-0 mx-auto sm:mx-0">
-                <img
-                  src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/981858a9-711e-4712-81e3-d7b0fcb74866.jpg"
-                  alt="Ли Мэй - управляющий гостиницей"
-                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-4 border-primary shadow-md group-hover:border-secondary transition-all duration-300"
-                />
-                <span className="absolute bottom-0 right-0 sm:bottom-1 sm:right-1 w-4 h-4 sm:w-5 sm:h-5 bg-green-500 border-2 border-white rounded-full shadow-md"></span>
-              </div>
-
-              <div className="flex-1 w-full text-center sm:text-left">
-                <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 mb-2">
-                  <h3 className="text-lg sm:text-xl font-bold text-primary group-hover:text-secondary transition-colors">
-                    Ли Мэй (李梅)
-                  </h3>
-                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
-                    В сети
-                  </span>
+            <div className="bg-muted rounded-lg p-4 sm:p-6 border-2 border-secondary hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-[1.01]">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
+                <div className="relative flex-shrink-0">
+                  <img
+                    src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/fea7357f-9cee-4228-bdaf-2a117fbf1ed3.jpg"
+                    alt="Фрау Элизабет Шмидт - управляющая замком"
+                    className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-primary shadow-lg transition-all duration-300 group-hover:border-secondary"
+                  />
+                  <span className="absolute bottom-0 right-0 w-5 h-5 bg-green-500 border-2 border-card rounded-full shadow-md"></span>
                 </div>
 
-                <p className="text-xs sm:text-sm text-muted-foreground mb-3">
-                  <strong>Должность:</strong> Старший администратор
-                </p>
+                <div className="flex-1 text-center sm:text-left">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 mb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-primary transition-colors duration-300 hover:text-secondary">
+                      Элизабет Шмидт
+                    </h3>
+                    <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
+                      В сети
+                    </span>
+                  </div>
 
-                <p className="text-xs sm:text-sm text-foreground leading-relaxed mb-3">
-                  Потомственный управляющий в 8-м поколении семьи Ли. Знаток традиций династии Тан, 
-                  специалист по чайным церемониям и фэншуй.
-                </p>
+                  <p className="text-xs sm:text-sm text-foreground mb-3">
+                    <strong>Должность:</strong> Старший администратор
+                  </p>
 
-                <div className="flex flex-wrap justify-center sm:justify-start gap-2 text-xs text-muted-foreground">
-                  <span className="px-2 py-1 bg-secondary/20 rounded whitespace-nowrap">Опыт: 15 лет</span>
-                  <span className="px-2 py-1 bg-secondary/20 rounded whitespace-nowrap">Языки: 中文, EN, РУ</span>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-3">
+                    Потомственная хранительница замка в 5-м поколении семьи Шмидт. Знаток средневековой 
+                    истории, эксперт по готической архитектуре и традициям рыцарских орденов.
+                  </p>
+
+                  <div className="flex flex-wrap justify-center sm:justify-start gap-2 text-xs text-muted-foreground">
+                    <span className="px-2 py-1 bg-accent rounded">Опыт: 18 лет</span>
+                    <span className="px-2 py-1 bg-accent rounded">Языки: DE, EN, FR, RU</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-muted rounded-lg">
-              <h4 className="font-semibold text-xs sm:text-sm text-foreground mb-2">График работы:</h4>
-              <p className="text-xs sm:text-sm text-muted-foreground">
-                Понедельник - Пятница: 08:00 - 20:00<br />
-                Суббота - Воскресенье: 10:00 - 18:00
-              </p>
+              <div className="mt-6 pt-4 border-t border-border">
+                <h4 className="text-sm font-semibold text-foreground mb-2">График работы:</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">
+                  Понедельник - Пятница: 08:00 - 20:00<br />
+                  Суббота - Воскресенье: 10:00 - 18:00
+                </p>
+              </div>
             </div>
           </section>
         </div>
       </main>
 
-      <footer className="bg-primary text-primary-foreground py-6 sm:py-8 border-t-4 border-secondary">
-        <div className="container mx-auto px-4 text-center">
+      <footer className="bg-primary text-primary-foreground py-6 sm:py-8 text-center border-t-4 border-secondary">
+        <div className="container mx-auto px-4">
           <p className="text-xs sm:text-sm opacity-90">
-            © 756-2024 Гостиница «Врата Дракона» • Провинция Шэньси, Китай
+            © 1142-2024 Замок Рабенштайн • Бавария, Германия
           </p>
           <p className="text-xs mt-2 opacity-75">
             Объект культурного наследия под защитой ЮНЕСКО
