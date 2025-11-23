@@ -19,8 +19,8 @@ const Index = () => {
           <div className="p-4 sm:p-6 md:p-8">
             <section className="mb-8">
               <img 
-                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/93f483ff-443c-478e-a891-3c372132d133.jpg" 
-                alt="Замок Рабенштайн на закате" 
+                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/0a271d4c-9c61-47ef-9f54-ace6caf5d941.jpg" 
+                alt="Мистический готический замок Рабенштайн" 
                 className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-lg shadow-md mb-4 sm:mb-6"
               />
               
@@ -51,8 +51,8 @@ const Index = () => {
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Архитектурные особенности</h3>
               
               <img 
-                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/a8d92435-2f7b-4664-828b-3af0a1620891.jpg" 
-                alt="Внутренний двор замка" 
+                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/b2bd0312-0de5-47ed-889d-43f8de965f8d.jpg" 
+                alt="Парадный зал замка" 
                 className="w-full sm:float-right sm:ml-6 sm:max-w-xs md:max-w-md h-48 sm:h-60 md:h-80 object-cover rounded-lg shadow-md mb-4 sm:mb-6"
               />
               
@@ -73,6 +73,18 @@ const Index = () => {
                 Особое внимание уделялось защите и комфорту. В каждом зале были установлены 
                 массивные камины из чёрного гранита, а стены покрыты гобеленами ручной работы, 
                 защищающими от холода.
+              </p>
+
+              <img 
+                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/1e0c32c5-2afb-4236-a54b-c437bff33263.jpg" 
+                alt="Роскошный номер в замке" 
+                className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg shadow-md mb-4 sm:mb-6"
+              />
+
+              <p className="mb-4 leading-relaxed text-foreground">
+                Каждый из 24 номеров замка сочетает средневековую атмосферу с современным комфортом. 
+                Кровати с балдахинами, антикварная мебель и панорамные готические окна создают 
+                неповторимое ощущение путешествия во времени.
               </p>
             </section>
 
