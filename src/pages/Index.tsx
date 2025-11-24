@@ -19,9 +19,9 @@ const Index = () => {
           <div className="p-4 sm:p-6 md:p-8">
             <section className="mb-8">
               <img 
-                src="https://images.unsplash.com/photo-1546422904-90eab23c3d7e?w=1200&q=80" 
+                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/0a271d4c-9c61-47ef-9f54-ace6caf5d941.jpg" 
                 alt="Мистический готический замок Рабенштайн" 
-                className="w-full h-auto max-h-96 object-contain rounded-lg shadow-md mb-4 sm:mb-6"
+                className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-lg shadow-md mb-4 sm:mb-6"
               />
               
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Основание и расцвет</h3>
@@ -51,9 +51,9 @@ const Index = () => {
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Архитектурные особенности</h3>
               
               <img 
-                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/242423b1-8947-4090-bb0d-5e4f86efca67.jpg" 
+                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/b2bd0312-0de5-47ed-889d-43f8de965f8d.jpg" 
                 alt="Парадный зал замка" 
-                className="w-full sm:float-right sm:ml-6 sm:max-w-xs md:max-w-sm h-auto max-h-80 object-contain rounded-lg shadow-md mb-4 sm:mb-6"
+                className="w-full sm:float-right sm:ml-6 sm:max-w-xs md:max-w-md h-48 sm:h-60 md:h-80 object-cover rounded-lg shadow-md mb-4 sm:mb-6"
               />
               
               <p className="mb-4 leading-relaxed text-foreground">
@@ -76,9 +76,9 @@ const Index = () => {
               </p>
 
               <img 
-                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/d928b5e5-78d5-465c-94ab-22dd7afe6740.jpg" 
+                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/1e0c32c5-2afb-4236-a54b-c437bff33263.jpg" 
                 alt="Роскошный номер в замке" 
-                className="w-full h-auto max-h-96 object-contain rounded-lg shadow-md mb-4 sm:mb-6"
+                className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg shadow-md mb-4 sm:mb-6"
               />
 
               <p className="mb-4 leading-relaxed text-foreground">
@@ -257,7 +257,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
                 <div className="relative flex-shrink-0">
                   <img
-                    src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/3513e9d2-0a61-4471-9869-62c38c1fdfbd.jpg"
+                    src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/fea7357f-9cee-4228-bdaf-2a117fbf1ed3.jpg"
                     alt="Фрау Элизабет Шмидт - управляющая замком"
                     className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-primary shadow-lg transition-all duration-300 group-hover:border-secondary"
                   />
