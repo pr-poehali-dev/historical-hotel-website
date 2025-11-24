@@ -18,23 +18,27 @@ const Index = () => {
 
           <div className="p-4 sm:p-6 md:p-8">
             <section className="mb-8">
-              <img 
-                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/1bf9f8b6-9eb4-41f1-84a8-1cca33e920fe.jpg" 
-                alt="Мистический готический замок Рабенштайн" 
-                className="w-full h-auto max-h-[500px] object-contain rounded-lg shadow-md mb-4 sm:mb-6 bg-muted/30"
-              />
-              
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Основание и расцвет</h3>
-              <p className="mb-4 leading-relaxed text-foreground">
-                В далёком 1142 году, во времена Священной Римской империи, на скалистом утёсе в Баварии 
-                был возведён замок Рабенштайн. Его основатель, рыцарь Конрад фон Штайнберг, построил эту 
-                крепость как стратегический пункт на торговом пути, соединяющем север и юг империи.
-              </p>
-              <p className="mb-4 leading-relaxed text-foreground">
-                Замок расположился на высоте 850 метров над уровнем моря, среди дремучих лесов Шварцвальда. 
-                Здесь останавливались купцы, рыцари, монахи и даже императорские послы, ищущие приют в 
-                суровых горах.
-              </p>
+              <div className="md:flex md:gap-6 md:items-start">
+                <div className="md:flex-1">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Основание и расцвет</h3>
+                  <p className="mb-4 leading-relaxed text-foreground">
+                    В далёком 1142 году, во времена Священной Римской империи, на скалистом утёсе в Баварии 
+                    был возведён замок Рабенштайн. Его основатель, рыцарь Конрад фон Штайнберг, построил эту 
+                    крепость как стратегический пункт на торговом пути, соединяющем север и юг империи.
+                  </p>
+                  <p className="mb-4 leading-relaxed text-foreground">
+                    Замок расположился на высоте 850 метров над уровнем моря, среди дремучих лесов Шварцвальда. 
+                    Здесь останавливались купцы, рыцари, монахи и даже императорские послы, ищущие приют в 
+                    суровых горах.
+                  </p>
+                </div>
+                
+                <img 
+                  src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/1bf9f8b6-9eb4-41f1-84a8-1cca33e920fe.jpg" 
+                  alt="Мистический готический замок Рабенштайн" 
+                  className="w-full md:w-96 h-auto max-h-[400px] object-contain rounded-lg shadow-md mb-4 md:mb-0 bg-muted/30"
+                />
+              </div>
 
               <blockquote className="border-l-4 border-secondary bg-accent p-6 my-6 rounded-r-lg italic">
                 <p className="text-lg text-accent-foreground">
@@ -48,44 +52,52 @@ const Index = () => {
             </section>
 
             <section className="mb-8">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Архитектурные особенности</h3>
+              <div className="md:flex md:gap-6 md:items-start">
+                <img 
+                  src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/242423b1-8947-4090-bb0d-5e4f86efca67.jpg" 
+                  alt="Парадный зал замка" 
+                  className="w-full md:w-96 h-auto max-h-[400px] object-contain rounded-lg shadow-md mb-4 md:mb-0 md:order-2 bg-muted/30"
+                />
+                
+                <div className="md:flex-1">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-primary">Архитектурные особенности</h3>
+                  
+                  <p className="mb-4 leading-relaxed text-foreground">
+                    Замок построен в готическом стиле с элементами романской архитектуры. 
+                    Главные особенности строения:
+                  </p>
+
+                  <ul className="list-disc list-inside space-y-2 mb-6 ml-4">
+                    <li>Остроконечные готические арки с каменной резьбой</li>
+                    <li>Центральный двор с колодцем глубиной 60 метров</li>
+                    <li>Массивные дубовые балки из 600-летних деревьев</li>
+                    <li>Кованые железные факелы вдоль каменных коридоров</li>
+                    <li>Витражные окна с гербами знатных семей</li>
+                  </ul>
+
+                  <p className="mb-4 leading-relaxed text-foreground">
+                    Особое внимание уделялось защите и комфорту. В каждом зале были установлены 
+                    массивные камины из чёрного гранита, а стены покрыты гобеленами ручной работы, 
+                    защищающими от холода.
+                  </p>
+                </div>
+              </div>
               
-              <img 
-                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/242423b1-8947-4090-bb0d-5e4f86efca67.jpg" 
-                alt="Парадный зал замка" 
-                className="w-full sm:float-right sm:ml-6 sm:w-80 md:w-96 h-auto max-h-[400px] object-contain rounded-lg shadow-md mb-4 sm:mb-6 bg-muted/30"
-              />
-              
-              <p className="mb-4 leading-relaxed text-foreground">
-                Замок построен в готическом стиле с элементами романской архитектуры. 
-                Главные особенности строения:
-              </p>
-
-              <ul className="list-disc list-inside space-y-2 mb-6 ml-4">
-                <li>Остроконечные готические арки с каменной резьбой</li>
-                <li>Центральный двор с колодцем глубиной 60 метров</li>
-                <li>Массивные дубовые балки из 600-летних деревьев</li>
-                <li>Кованые железные факелы вдоль каменных коридоров</li>
-                <li>Витражные окна с гербами знатных семей</li>
-              </ul>
-
-              <p className="mb-4 leading-relaxed text-foreground clear-both">
-                Особое внимание уделялось защите и комфорту. В каждом зале были установлены 
-                массивные камины из чёрного гранита, а стены покрыты гобеленами ручной работы, 
-                защищающими от холода.
-              </p>
-
-              <img 
-                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/d928b5e5-78d5-465c-94ab-22dd7afe6740.jpg" 
-                alt="Роскошный номер в замке" 
-                className="w-full h-auto max-h-[450px] object-contain rounded-lg shadow-md mb-4 sm:mb-6 bg-muted/30"
-              />
-
-              <p className="mb-4 leading-relaxed text-foreground">
-                Каждый из 24 номеров замка сочетает средневековую атмосферу с современным комфортом. 
-                Кровати с балдахинами, антикварная мебель и панорамные готические окна создают 
-                неповторимое ощущение путешествия во времени.
-              </p>
+              <div className="md:flex md:gap-6 md:items-start mt-8">
+                <div className="md:flex-1">
+                  <p className="mb-4 leading-relaxed text-foreground">
+                    Каждый из 24 номеров замка сочетает средневековую атмосферу с современным комфортом. 
+                    Кровати с балдахинами, антикварная мебель и панорамные готические окна создают 
+                    неповторимое ощущение путешествия во времени.
+                  </p>
+                </div>
+                
+                <img 
+                  src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/d928b5e5-78d5-465c-94ab-22dd7afe6740.jpg" 
+                  alt="Роскошный номер в замке" 
+                  className="w-full md:w-96 h-auto max-h-[400px] object-contain rounded-lg shadow-md mb-4 md:mb-0 bg-muted/30"
+                />
+              </div>
             </section>
 
             <section className="mb-8">
