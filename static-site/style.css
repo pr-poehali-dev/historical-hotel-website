@@ -687,13 +687,27 @@ h6 {
     padding: 3rem;
   }
 
-  /* Плавающее изображение справа (фиксированная ширина для красивого обтекания) */
-  .float-image {
-    float: right;
-    margin-left: 1.5rem;
-    max-width: 400px;
+  /* Флекс-контейнер для размещения текста и изображений рядом */
+  .flex-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  /* Обратный порядок (изображение слева, текст справа) */
+  .flex-reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* Текстовая часть флекс-контейнера */
+  .flex-text {
+    flex: 1;
+  }
+
+  /* Изображение внутри флекс-контейнера */
+  .flex-image {
     width: 400px;
-    margin-bottom: 1rem;
+    flex-shrink: 0;
   }
 
   /* Карточка пользователя - горизонтальный layout */
