@@ -19,7 +19,7 @@ const Index = () => {
           <div className="p-4 sm:p-6 md:p-8">
             <section className="mb-8">
               <img 
-                src="https://images.unsplash.com/photo-1546422904-90eab23c3d7e?w=1200&q=80" 
+                src="https://cdn.poehali.dev/projects/b8f93084-25db-474a-92cc-299af9542b37/files/1bf9f8b6-9eb4-41f1-84a8-1cca33e920fe.jpg" 
                 alt="Мистический готический замок Рабенштайн" 
                 className="w-full h-auto max-h-[500px] object-contain rounded-lg shadow-md mb-4 sm:mb-6 bg-muted/30"
               />
